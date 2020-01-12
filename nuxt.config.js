@@ -39,6 +39,7 @@ export default {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
+    '@bazzite/nuxt-netlify',
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
   ],
@@ -49,7 +50,8 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
-  }
+  },
+  netlify: { mergeSecurityHeaders: true }
 }
