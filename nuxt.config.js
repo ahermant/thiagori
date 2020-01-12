@@ -42,6 +42,40 @@ export default {
     '@bazzite/nuxt-netlify',
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
+    [
+      'nuxt-i18n',
+      {
+        locales: ['en', 'fr', 'pt'],
+        defaultLocale: 'en',
+        vueI18n: {
+          fallbackLocale: 'en',
+          messages: {
+            en: {
+              gifts: 'Gifts',
+              greeting: 'Hello world!',
+              guest_messages: 'Guest messages',
+              hotel: 'Hotel',
+              lang: 'Lanf',
+              our_story: 'Our story',
+              rsvp: 'RSVP',
+            },
+            fr: {
+              gifts: 'Cadeaux',
+              guest_messages: 'Messages aux invités',
+              greeting: 'Salut tout le monde',
+              hotel: 'Hôtel',
+              lang: 'Langue',
+              our_story: 'Notre histoire',
+              rsvp: 'RSVP',
+            },
+            pt: {
+              greeting: 'Opa pessoal !',
+              our_story: 'Nossa historia'
+            }
+          }
+        }
+      }
+    ]
   ],
   /*
   ** Build configuration

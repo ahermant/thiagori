@@ -1,13 +1,25 @@
 <template>
   <div>
+    <b-embed id="myVideo" autoplay loop type="video" src="~/assets/thiagoriIntro.mp4" />
+    <Header />
     <nuxt />
   </div>
 </template>
 
+<script>
+import Header from "~/components/Header.vue";
+
+export default {
+  components: {
+    Header
+  }
+};
+</script>
+
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -51,5 +63,10 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  min-width: 100%;
 }
 </style>
