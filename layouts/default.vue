@@ -1,6 +1,14 @@
 <template>
   <div>
-    <b-embed id="myVideo" autoplay loop type="video" src="~/assets/thiagoriIntro.mp4" />
+    <b-embed
+      id="myVideo"
+      playsinline
+      muted
+      autoplay
+      loop
+      type="video"
+      src="~/assets/thiagoriIntro.mp4"
+    />
     <Header />
     <nuxt />
   </div>

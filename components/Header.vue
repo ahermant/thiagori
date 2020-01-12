@@ -10,7 +10,7 @@
           <b-nav-item class="nav--link" href="/contact">{{ $t('rsvp') }}</b-nav-item>
           <b-nav-item class="nav--link" href="/contact">{{ $t('guest_messages') }}</b-nav-item>
           <b-nav-item class="nav--link" href="/contact">{{ $t('gifts') }}</b-nav-item>
-          <b-nav-item-dropdown class="text-uppercase ml-4" text="Lang">
+          <b-nav-item-dropdown class="text-uppercase" text="Lang">
             <b-dropdown-item
               v-for="lg in availableLocales"
               :key="lg"
