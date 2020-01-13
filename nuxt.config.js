@@ -55,8 +55,9 @@ export default {
               greeting: 'Hello world!',
               guest_messages: 'Guest messages',
               hotel: 'Hotel',
-              lang: 'Lanf',
+              lang: 'Lang',
               our_story: 'Our story',
+              our_story_content: 'The moment I met Juliette aboard the Love Boat, I knew she was someone special. She became my first love, but we lived 90 miles apart. After the cruise, we maintained our love affair through handwritten letters. Eventually, geography took its toll. We went on to separate lives, yet I thought about her quite often. Nine years later, we reunited in Grand Central Station. I hired a violinist to play our love song as we held each other for the first time in one decade. After wishing to be with her all those years apart, we finally decided to marry.',
               rsvp: 'RSVP',
             },
             fr: {
