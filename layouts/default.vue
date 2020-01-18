@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-embed
+    <video
       id="myVideo"
       playsinline
       muted
@@ -20,6 +20,9 @@ import Header from "~/components/Header.vue";
 export default {
   components: {
     Header
+  },
+  mounted() {
+    //document.getElementById("myVideo").play();
   }
 };
 </script>
@@ -76,5 +79,6 @@ html {
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
   min-width: 100%;
+  width: 100%;
 }
 </style>

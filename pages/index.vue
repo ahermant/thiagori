@@ -1,13 +1,16 @@
 <template>
-  <div class="container">
+  <div class="w-100">
     <div>
-      <ourStory />
-      <logo />
-      <h1 class="title">thiagori</h1>
-      <h2 class="subtitle">Simple wedding website</h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+      <ourStory class="mx-auto" />
+      <mapAndHotels />
+      <div class="mx-auto text-center">
+        <logo />
+        <h1 class="title">thiagori</h1>
+        <h2 class="subtitle">Simple wedding website</h2>
+        <div class="links">
+          <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
+          <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+        </div>
       </div>
     </div>
   </div>
@@ -16,11 +19,13 @@
 <script>
 import Logo from "~/components/Logo.vue";
 import OurStory from "~/components/OurStory.vue";
+import MapAndHotels from "~/components/MapAndHotels.vue";
 
 export default {
   components: {
     Logo,
-    OurStory
+    OurStory,
+    MapAndHotels
   }
 };
 </script>
