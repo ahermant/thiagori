@@ -2,7 +2,7 @@
   <div class="w-100">
     <div>
       <ourStory class="mx-auto" />
-      <mapAndHotels />
+      <mapAndHotels class="mx-auto" />
       <div class="mx-auto text-center">
         <logo />
         <h1 class="title">thiagori</h1>

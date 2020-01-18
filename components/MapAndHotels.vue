@@ -1,18 +1,14 @@
 <template>
-  <div id="map">
+  <div id="map" class="w-100 text-center py-3 mx-auto">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.733603092703!2d-40.19286894907956!3d-20.18681445149419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81da9518a53c3%3A0xff0535f8c34a60e0!2sAv.%20Atapo%C3%A3%2C%201%20-%20Manguinhos%2C%20Serra%20-%20ES%2C%2029173-000%2C%20Br%C3%A9sil!5e0!3m2!1sfr!2sca!4v1579368065953!5m2!1sfr!2sca"
-      width="600"
-      height="450"
+      src="https://www.google.com/maps/d/embed?mid=1j8G5m3OwD0yMvFygQC2NLDbasECnq2jE&ll=-20.190487557262188%2C-40.19208467892918&z=15&legend=true&theme=light"
+      width="60%"
+      height="500px"
+      class="mx-auto"
       frameborder="0"
-      style="border:0;"
-      allowfullscreen
+      style="border:0"
     ></iframe>
-    <b-card body-class="text-center" class="w-75 border-0 mt-2 mb-5">
-      <b-card-title title-tag="h2" :title="$t('our_story')" class="my-5" />
-      <hr class="my-4" />
-      <b-card-text class="text-justify">{{$t('our_story_content')}}</b-card-text>
-    </b-card>
+    <b-card body-class="text-center" class="w-75 border-0 mt-2 mb-5"></b-card>
   </div>
 </template>
 
@@ -25,5 +21,6 @@ export default {
 <style lang="scss">
 #map {
   background-color: lightgray;
+  height: "600px";
 }
 </style>
