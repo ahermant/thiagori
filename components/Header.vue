@@ -5,29 +5,42 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav fill>
-          <b-nav-item class="nav--link" href="/about">{{ $t('our_story') }}</b-nav-item>
-          <b-nav-item class="nav--link" href="/blog">{{ $t('hotel') }}</b-nav-item>
+          <b-nav-item class="nav--link" href="#storyAnchor">{{ $t('our_story') }}</b-nav-item>
+          <b-nav-item class="nav--link" href="#mapAnchor">{{ $t('hotel') }}</b-nav-item>
           <b-nav-item class="nav--link" href="/contact">{{ $t('rsvp') }}</b-nav-item>
           <b-nav-item class="nav--link" href="/contact">{{ $t('guest_messages') }}</b-nav-item>
           <b-nav-item class="nav--link" href="/contact">{{ $t('gifts') }}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
       <!-- Right aligned nav items -->
-      <b-navbar-nav>
-        <b-nav-item-dropdown class="text-uppercase lang" :text="$t('lang')">
+      <b-navbar-nav class="langs" fill>
+        <b-nav-item
+          class="nav--link"
+          :href="switchLocalePath(lg)"
+          v-for="lg in availableLocales"
+          :key="lg"
+        >
+          <country-flag :country="lg==='en'?'gb':lg" size="normal" />
+        </b-nav-item>
+        <!--         <b-nav-item-dropdown class="text-uppercase lang" :text="$t('lang')">
           <b-dropdown-item
             v-for="lg in availableLocales"
             :key="lg"
             :href="switchLocalePath(lg)"
           >{{ lg }}</b-dropdown-item>
-        </b-nav-item-dropdown>
+        </b-nav-item-dropdown>-->
       </b-navbar-nav>
     </b-navbar>
   </header>
 </template>
 
 <script>
+import CountryFlag from "vue-country-flag";
+
 export default {
+  components: {
+    CountryFlag
+  },
   computed: {
     availableLocales() {
       console.log(this.$i18n.locales.filter(i => i.code !== this.$i18n.locale));
@@ -57,13 +70,19 @@ nav {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  z-index: 1000;
 }
-
+/* 
 .lang {
   text-align: right;
   position: fixed;
   right: 0.5em;
   top: 0.5em;
+} */
+
+.langs {
+  flex-direction: row;
+  margin-left: auto;
 }
 
 .nav--link {
