@@ -45,7 +45,7 @@ export default {
     [
       'nuxt-i18n',
       {
-        locales: ['en', 'fr', 'pt'],
+        locales: ['en', 'fr', 'br'],
         defaultLocale: 'en',
         vueI18n: {
           fallbackLocale: 'en',
@@ -75,7 +75,7 @@ export default {
               rsvp: 'RSVP',
               wedding_place: 'Lieu de la cérémonie'
             },
-            pt: {
+            br: {
               greeting: 'Opa pessoal !',
               our_story: 'Nossa historia'
             }
