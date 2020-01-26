@@ -9,9 +9,17 @@
         method="POST"
         data-netlify-recaptcha="true"
         @reset="onReset"
+        @submit="onSubmit"
         v-if="show"
         netlify
+        netlify-honeypot="bot-field"
       >
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you're human:
+            <input name="bot-field" />
+          </label>
+        </p>
         <b-row>
           <b-col lg="4">
             <b-form-group id="rsvpRadioGroup" :label="$t('want_to_attend')">
