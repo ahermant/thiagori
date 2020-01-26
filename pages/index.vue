@@ -3,6 +3,7 @@
     <div>
       <ourStory class="mx-auto" />
       <mapAndHotels class="mx-auto" />
+      <rSVP class="mx-auto" />
       <div class="mx-auto text-center">
         <logo />
         <h1 class="title">thiagori</h1>
@@ -20,12 +21,14 @@
 import Logo from "~/components/Logo.vue";
 import OurStory from "~/components/OurStory.vue";
 import MapAndHotels from "~/components/MapAndHotels.vue";
+import RSVP from "~/components/RSVP.vue";
 
 export default {
   components: {
     Logo,
     OurStory,
-    MapAndHotels
+    MapAndHotels,
+    RSVP
   }
 };
 </script>

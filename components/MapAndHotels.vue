@@ -25,6 +25,7 @@
                 {{weddingPlace.name}}
               </b-link>
             </h5>
+            <p>{{weddingPlace.address}}</p>
           </div>
         </b-card>
         <b-card class="mapCard mb-3 text-justify">
@@ -37,6 +38,7 @@
               <b-icon icon="geo"></b-icon>
               {{place.name}}
             </b-link>
+            <p>{{place.address}}</p>
           </div>
         </b-card>
       </b-col>
@@ -47,7 +49,7 @@
           <iframe
             :src="mapURL"
             width="100%"
-            height="510"
+            height="735px"
             frameborder="0"
             allowfullscreen
             class="border-0 mb-4"
@@ -65,52 +67,64 @@ export default {
       placeName: this.$t("global_view"),
       mapURL:
         "https://www.google.com/maps/d/embed?mid=1j8G5m3OwD0yMvFygQC2NLDbasECnq2jE&z=14",
+      address: "",
       globalView: {
         name: this.$t("global_view"),
         mapURL:
-          "https://www.google.com/maps/d/embed?mid=1j8G5m3OwD0yMvFygQC2NLDbasECnq2jE&z=14"
+          "https://www.google.com/maps/d/embed?mid=1j8G5m3OwD0yMvFygQC2NLDbasECnq2jE&z=14",
+        address: ""
       },
       weddingPlace: {
         name: this.$t("wedding_place"),
         mapURL:
-          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.733603092703!2d-40.19286894907956!3d-20.18681445149419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81da9518a53c3%3A0xff0535f8c34a60e0!2sAv.%20Atapo%C3%A3%2C%201%20-%20Manguinhos%2C%20Serra%20-%20ES%2C%2029173-000%2C%20Br%C3%A9sil!5e0!3m2!1sfr!2sca!4v1579458564783!5m2!1sfr!2sca"
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.733603092703!2d-40.19286894907956!3d-20.18681445149419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81da9518a53c3%3A0xff0535f8c34a60e0!2sAv.%20Atapo%C3%A3%2C%201%20-%20Manguinhos%2C%20Serra%20-%20ES%2C%2029173-000%2C%20Br%C3%A9sil!5e0!3m2!1sfr!2sca!4v1579458564783!5m2!1sfr!2sca",
+        address: "Av. Atapoã, 1 - Manguinhos, Serra - ES, 29173-000"
       },
       hotelsList: [
         {
           name: "Eco Manguinhos",
           mapURL:
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.62501206656!2d-40.198089449079404!3d-20.191332951637637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81d2dc60527f1%3A0xe1fa699b8cb15e44!2sECO%20MANGUINHOS!5e0!3m2!1sfr!2sca!4v1579459016469!5m2!1sfr!2sca"
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.62501206656!2d-40.198089449079404!3d-20.191332951637637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81d2dc60527f1%3A0xe1fa699b8cb15e44!2sECO%20MANGUINHOS!5e0!3m2!1sfr!2sca!4v1579459016469!5m2!1sfr!2sca",
+          address:
+            "064, R. Prof. Geraldo Costa Alves, 01 - Manguinhos, Serra - ES"
         },
         {
           name: "Orchard Inn Manguinhos",
           mapURL:
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.573074325389!2d-40.19725064907934!3d-20.193493751706246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81dad2ef24311%3A0xdb8ec9bbc772f50!2sOrchard%20Inn%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579464763784!5m2!1sfr!2sca"
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.573074325389!2d-40.19725064907934!3d-20.193493751706246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81dad2ef24311%3A0xdb8ec9bbc772f50!2sOrchard%20Inn%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579464763784!5m2!1sfr!2sca",
+          address: "R. Elpídio Pímentel, 22 - Manguinhos, Serra - ES, 29173-065"
         },
         {
           name: "Pousada Manguas",
           mapURL:
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.561891919485!2d-40.194402049079365!3d-20.19395895172096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81c534f201ceb%3A0x45b07166de344a1b!2sPousada%20Mangas!5e0!3m2!1sfr!2sca!4v1579464879306!5m2!1sfr!2sca"
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.561891919485!2d-40.194402049079365!3d-20.19395895172096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81c534f201ceb%3A0x45b07166de344a1b!2sPousada%20Mangas!5e0!3m2!1sfr!2sca!4v1579464879306!5m2!1sfr!2sca",
+          address: "Av. Mte. Álvaro, 186 - Manguinhos, Serra - ES, 29173-039"
         },
         {
           name: "Hostel Kurahay",
           mapURL:
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.5960320983245!2d-40.19310554907939!3d-20.192538651675886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81dab6733292b%3A0x4b6be2aba7c40f3b!2sHostel%20Kuarahy!5e0!3m2!1sfr!2sca!4v1579465007278!5m2!1sfr!2sca"
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.5960320983245!2d-40.19310554907939!3d-20.192538651675886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81dab6733292b%3A0x4b6be2aba7c40f3b!2sHostel%20Kuarahy!5e0!3m2!1sfr!2sca!4v1579465007278!5m2!1sfr!2sca",
+          address: "Av. Atapoã, 607 - Manguinhos, Serra - ES, 29173-000"
         },
         {
           name: "Aldeia Manguinhos",
           mapURL:
-            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14977.785651760476!2d-40.1972828!3d-20.1987624!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c991f0d8d7468d7!2sAldeia%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579470319184!5m2!1sfr!2sca"
+            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14977.785651760476!2d-40.1972828!3d-20.1987624!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c991f0d8d7468d7!2sAldeia%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579470319184!5m2!1sfr!2sca",
+          address: "Av. Bicanga, 278 - Manguinhos, Serra - ES, 29164-817"
         },
 
         {
           name: "Solar de Manguinhos",
           mapURL:
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.5868693050315!2d-40.19383404907931!3d-20.19291985168805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81daca67837b1%3A0x1c532dd7adcd1878!2sSolar%20de%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579465106495!5m2!1sfr!2sca"
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.5868693050315!2d-40.19383404907931!3d-20.19291985168805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81daca67837b1%3A0x1c532dd7adcd1878!2sSolar%20de%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579465106495!5m2!1sfr!2sca",
+          address: "Av, R. Ocidente, 172 - Manguinhos, Serra - ES, 29173-047"
         },
         {
           name: "Spaço 'D Hospedagem",
           mapURL:
-            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14978.430571328767!2d-40.1970712!3d-20.1920556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x695789c04b73924a!2sSpa%C3%A7o%20D%20Hospedagem!5e0!3m2!1sfr!2sca!4v1579470570708!5m2!1sfr!2sca"
+            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14978.430571328767!2d-40.1970712!3d-20.1920556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x695789c04b73924a!2sSpa%C3%A7o%20D%20Hospedagem!5e0!3m2!1sfr!2sca!4v1579470570708!5m2!1sfr!2sca",
+          address:
+            "R. Manoel José Lírio de Sales, 17 - Manguinhos, Serra - ES, 29173-050"
         }
       ]
     };
