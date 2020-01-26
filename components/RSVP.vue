@@ -6,14 +6,15 @@
     <div>
       <b-form
         name="rsvp"
-        method="POST"
+        method="post"
         data-netlify-recaptcha="true"
         @reset="onReset"
         @submit="onSubmit"
         v-if="show"
-        netlify
+        data-netlify="true"
         netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value="rsvp" />
         <p class="hidden">
           <label>
             Don’t fill this out if you're human:
