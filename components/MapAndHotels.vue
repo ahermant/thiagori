@@ -49,7 +49,7 @@
           <iframe
             :src="mapURL"
             width="100%"
-            height="735px"
+            height="782px"
             frameborder="0"
             allowfullscreen
             class="border-0 mb-4"

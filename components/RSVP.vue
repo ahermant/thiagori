@@ -146,4 +146,7 @@ export default {
   top: -20em;
   display: block;
 }
+.hidden {
+  display: none;
+}
 </style>
