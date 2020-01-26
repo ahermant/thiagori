@@ -120,7 +120,7 @@ export default {
   },
   methods: {
     onSubmit(evt) {
-      evt.preventDefault();
+      //evt.preventDefault();
       alert(this.$t("thank_you_for_submission"));
     },
     onReset(evt) {
