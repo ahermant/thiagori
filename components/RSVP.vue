@@ -85,13 +85,6 @@
           <b-button type="reset" name="reset" variant="danger">{{$t('reset')}}</b-button>
         </div>
       </b-form>
-      <form name="rsvp" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
-        <input type="radio" name="attendance" />
-        <input type="text" name="name" />
-        <input type="text" name="email" />
-        <input type="select" name="attendeesNumber" />
-        <textarea name="message"></textarea>
-      </form>
     </div>
   </b-card>
 </template>
