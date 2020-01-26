@@ -110,6 +110,10 @@ export default {
     }
   },
   methods: {
+    onSubmit(evt) {
+      evt.preventDefault();
+      alert(this.$("thank_you_for_submission"));
+    },
     onReset(evt) {
       evt.preventDefault();
       // Reset our form values
