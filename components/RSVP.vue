@@ -8,7 +8,6 @@
         name="rsvp"
         method="POST"
         data-netlify-recaptcha="true"
-        @submit="onSubmit"
         @reset="onReset"
         v-if="show"
         netlify
@@ -111,10 +110,6 @@ export default {
     }
   },
   methods: {
-    onSubmit(evt) {
-      evt.preventDefault();
-      alert(JSON.stringify(this.form));
-    },
     onReset(evt) {
       evt.preventDefault();
       // Reset our form values
