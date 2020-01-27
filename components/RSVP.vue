@@ -4,13 +4,7 @@
     <b-card-title title-tag="h2" :title="$t('rsvp')" class="text-center mt-3 mb-5" />
     <hr class="my-4" />
     <div>
-      <b-form
-        name="rsvp-1"
-        method="post"
-        data-netlify-recaptcha="true"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
+      <b-form name="rsvp-1" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="rsvp-1" />
         <p class="hidden">
           <label>
@@ -76,42 +70,10 @@
             rows="5"
           ></b-form-textarea>
         </b-form-group>
-        <div data-netlify-recaptcha="true"></div>
         <div class="text-center">
           <b-button type="submit" name="submit" variant="primary">{{$t('send')}}</b-button>
         </div>
       </b-form>
-      <!--
-      <form name="rsvp-1" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="rsvp-1" />
-        <div>
-          <label for="attendance">Attendance:</label>
-          Yes
-          <input type="radio" name="attendance" required value="true" />
-          <br />No
-          <input type="radio" name="attendance" required value="false" />
-        </div>
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" value required />
-        </div>
-        <div>
-          <input type="email" name="email" required />
-          <label for="email">Email:</label>
-        </div>
-        <div>
-          <select name="numberOfAttendees" required>
-            <option value>Select a number</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-          </select>
-        </div>
-        <div>
-          <textarea name="message" required></textarea>
-          <label for="message">Message:</label>
-        </div>
-        <button type="submit" value="Send message">Send</button>
-      </form>-->
     </div>
   </b-card>
 </template>
