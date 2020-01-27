@@ -6,6 +6,7 @@
     <div>
       <b-form
         name="rsvp"
+        action="#"
         method="post"
         data-netlify-recaptcha="true"
         @reset="onReset"
