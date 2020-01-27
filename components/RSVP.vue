@@ -87,9 +87,8 @@
           <b-button type="reset" name="reset" variant="danger">{{$t('reset')}}</b-button>
         </div>
       </b-form>-->
-      <form name="rsvp1" action="/" method="post" netlify netlify-honeypot="bot-field">
-        // Hidden input to check for bots
-        <input type="hidden" name="form-name" value="rsvp1" />
+      <form name="rsvp-1" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="rsvp-1" />
         <!--<div>
           <label for="attendance">Attendance:</label>
           Yes
@@ -99,7 +98,7 @@
         </div>-->
         <div>
           <label for="name">Name:</label>
-          <input type="text" name="name" required />
+          <input type="text" id="name" name="name" value required />
         </div>
         <!--<div>
           <input type="email" name="email" required />
