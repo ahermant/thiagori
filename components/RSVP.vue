@@ -87,7 +87,7 @@
           <b-button type="reset" name="reset" variant="danger">{{$t('reset')}}</b-button>
         </div>
       </b-form>-->
-      <form name="rsvp1" action="#" method="post" netlify netlify-honeypot="bot-field">
+      <form name="rsvp1" action="/" method="post" netlify netlify-honeypot="bot-field">
         // Hidden input to check for bots
         <input type="hidden" name="form-name" value="rsvp1" />
         <div>
