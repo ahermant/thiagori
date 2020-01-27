@@ -4,19 +4,15 @@
     <b-card-title title-tag="h2" :title="$t('rsvp')" class="text-center mt-3 mb-5" />
     <hr class="my-4" />
     <div>
-      <!--
       <b-form
-        name="rsvp"
-        action="#"
+        name="rsvp-1"
         method="post"
         data-netlify-recaptcha="true"
-        @reset="onReset"
-        @submit="onSubmit"
         v-if="show"
         data-netlify="true"
-        netlify-honeypot="bot-field"
+        data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="rsvp" />
+        <input type="hidden" name="form-name" value="rsvp-1" />
         <p class="hidden">
           <label>
             Don’t fill this out if you're human:
@@ -84,23 +80,23 @@
         <div data-netlify-recaptcha="true"></div>
         <div class="text-center">
           <b-button type="submit" name="submit" variant="primary">{{$t('send')}}</b-button>
-          <b-button type="reset" name="reset" variant="danger">{{$t('reset')}}</b-button>
         </div>
-      </b-form>-->
+      </b-form>
+      <!--
       <form name="rsvp-1" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="rsvp-1" />
-        <!--<div>
+        <div>
           <label for="attendance">Attendance:</label>
           Yes
           <input type="radio" name="attendance" required value="true" />
           <br />No
           <input type="radio" name="attendance" required value="false" />
-        </div>-->
+        </div>
         <div>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" value required />
         </div>
-        <!--<div>
+        <div>
           <input type="email" name="email" required />
           <label for="email">Email:</label>
         </div>
@@ -114,9 +110,9 @@
         <div>
           <textarea name="message" required></textarea>
           <label for="message">Message:</label>
-        </div>-->
+        </div>
         <button type="submit" value="Send message">Send</button>
-      </form>
+      </form>-->
     </div>
   </b-card>
 </template>
@@ -135,8 +131,7 @@ export default {
           { value: true, text: this.$t("yes") },
           { value: false, text: this.$t("no") }
         ]
-      },
-      show: true
+      }
     };
   },
   computed: {
@@ -154,20 +149,6 @@ export default {
     onSubmit(evt) {
       //evt.preventDefault();
       alert(this.$t("thank_you_for_submission"));
-    },
-    onReset(evt) {
-      evt.preventDefault();
-      // Reset our form values
-      this.form.attendance = "";
-      this.form.email = "";
-      this.form.name = "";
-      this.form.numberSelected = null;
-      this.form.message = "";
-      // Trick to reset/clear native browser form validation state
-      this.show = false;
-      this.$nextTick(() => {
-        this.show = true;
-      });
     }
   }
 };
