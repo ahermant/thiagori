@@ -86,6 +86,37 @@
           <b-button type="reset" name="reset" variant="danger">{{$t('reset')}}</b-button>
         </div>
       </b-form>
+      <form name="rsvp" action="#" method="post" netlify netlify-honeypot="bot-field">
+        // Hidden input to check for bots
+        <input type="hidden" name="form-name" value="rsvp" />
+        <div>
+          <label for="attendance">Attendance:</label>
+          Yes
+          <input type="radio" name="attendance" required value="true" />
+          <br />No
+          <input type="radio" name="attendance" required value="false" />
+        </div>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" name="name" required />
+        </div>
+        <div>
+          <input type="email" name="email" required />
+          <label for="email">Email:</label>
+        </div>
+        <div>
+          <select name="numberOfAttendees" required>
+            <option value>Select a number</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div>
+          <textarea name="message" required></textarea>
+          <label for="message">Message:</label>
+        </div>
+        <button type="submit" value="Send message">Send</button>
+      </form>
     </div>
   </b-card>
 </template>
