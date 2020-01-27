@@ -90,18 +90,18 @@
       <form name="rsvp1" action="/" method="post" netlify netlify-honeypot="bot-field">
         // Hidden input to check for bots
         <input type="hidden" name="form-name" value="rsvp1" />
-        <div>
+        <!--<div>
           <label for="attendance">Attendance:</label>
           Yes
           <input type="radio" name="attendance" required value="true" />
           <br />No
           <input type="radio" name="attendance" required value="false" />
-        </div>
+        </div>-->
         <div>
           <label for="name">Name:</label>
           <input type="text" name="name" required />
         </div>
-        <div>
+        <!--<div>
           <input type="email" name="email" required />
           <label for="email">Email:</label>
         </div>
@@ -115,7 +115,7 @@
         <div>
           <textarea name="message" required></textarea>
           <label for="message">Message:</label>
-        </div>
+        </div>-->
         <button type="submit" value="Send message">Send</button>
       </form>
     </div>
