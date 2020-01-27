@@ -4,6 +4,7 @@
     <b-card-title title-tag="h2" :title="$t('rsvp')" class="text-center mt-3 mb-5" />
     <hr class="my-4" />
     <div>
+      <!--
       <b-form
         name="rsvp"
         action="#"
@@ -85,10 +86,10 @@
           <b-button type="submit" name="submit" variant="primary">{{$t('send')}}</b-button>
           <b-button type="reset" name="reset" variant="danger">{{$t('reset')}}</b-button>
         </div>
-      </b-form>
-      <form name="rsvp" action="#" method="post" netlify netlify-honeypot="bot-field">
+      </b-form>-->
+      <form name="rsvp1" action="#" method="post" netlify netlify-honeypot="bot-field">
         // Hidden input to check for bots
-        <input type="hidden" name="form-name" value="rsvp" />
+        <input type="hidden" name="form-name" value="rsvp1" />
         <div>
           <label for="attendance">Attendance:</label>
           Yes
