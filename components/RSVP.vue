@@ -8,7 +8,6 @@
         name="rsvp-1"
         method="post"
         data-netlify-recaptcha="true"
-        v-if="show"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
