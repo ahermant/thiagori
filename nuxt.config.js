@@ -49,10 +49,18 @@ export default {
           fallbackLocale: 'en',
           messages: {
             br: {
+              busDescription: "Vitória conta com ônibus panorâmico de turismo, que possui a parte superior aberta para os passageiros terem uma visão privilegiada e ampla da cidade. O serviço de city tour ocorre às quartas-feiras, sábados, domingos e feriados e percorre vários atrativos. O veículo tem 49 lugares disponíveis, inclusive para idosos, gestantes e pessoas com mobilidade reduzida.",
+              busTitle: "Bustour Vitória e Vila Velha",
+              busLink: "https://www.capixabaturismo.com.br/bustour/",
+              busButtonText: "Official website",
               greeting: 'Opa pessoal !',
               our_story: 'Nossa historia'
             },
             fr: {
+              busDescription: "Le bus panoramique de Vitória a un toit ouvert pour que les passagers aient une vue privilégiée et large de la ville. Le service de visite de la ville a lieu les mercredis, samedis, dimanches et jours fériés et passe par plusieurs attractions. Le véhicule dispose de 49 places disponibles, y compris pour les personnes âgées, les femmes enceintes et les personnes à mobilité réduite.",
+              busTitle: "Tour de Vitória et Vila Velha en bus",
+              busLink: "https://www.tripadvisor.fr/Attraction_Review-g303320-d9748071-Reviews-Capixaba_Turismo_Receptivo-Vitoria_State_of_Espirito_Santo.html?m=19905",
+              busButtonText: "Lien tripadvisor",
               email_address: 'Adresse email',
               enter_email: 'Veuillez saisir votre email',
               enter_name: 'Veuillez saisir votre prénom et votre nom',
@@ -68,7 +76,7 @@ export default {
               no: 'Non',
               number_of_attendees: 'Nombre d\'invités',
               our_story: 'Notre histoire',
-              please_fill_attendees: 'Combien de personnes serez-vous ?',
+              please_fill_attendees: 'Combien serez-vous ?',
               reset: 'Réinitialiser',
               rsvp: 'RSVP',
               send: 'Envoyer',
@@ -80,6 +88,10 @@ export default {
               your_name: 'Prénom et nom'
             },
             en: {
+              busDescription: "Vitória has a panoramic tour bus, which has an open top for passengers to have a privileged and wide view of the city. The city tour service takes place on Wednesdays, Saturdays, Sundays and holidays and runs through several attractions. The vehicle has 49 seats available, including for the elderly, pregnant women and people with reduced mobility.",
+              busLink: "https://www.tripadvisor.co.uk/Attraction_Review-g303320-d9748071-Reviews-Capixaba_Turismo_Receptivo-Vitoria_State_of_Espirito_Santo.html?m=19905",
+              busButtonText: "Tripadvisor link",
+              busTitle: "Vitória and Vila Velha bus tour",
               email_address: 'Email address',
               enter_email: 'Please fill your email address',
               enter_name: 'Please fill your firstname and your name',

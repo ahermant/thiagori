@@ -116,9 +116,9 @@ export default {
 </script>
 
 <style lang="scss">
-#storyAnchor {
+#RSVPAnchor {
   position: relative;
-  top: -20em;
+  top: -10em;
   display: block;
 }
 .hidden {

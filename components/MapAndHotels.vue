@@ -2,12 +2,12 @@
   <div id="mapContainer" class="w-100 text-center pt-3 mx-auto">
     <b-row class="m-4">
       <b-col fluid>
-        <b-card :title="$t('hotel')" title-tag="h2" class="mapCard text-center text-justify" />
+        <b-card :title="$t('hotel')" title-tag="h2" class="thiagoriCard text-center text-justify" />
       </b-col>
     </b-row>
     <b-row class="m-4">
       <b-col lg="4">
-        <b-card class="mapCard mb-3 text-justify">
+        <b-card class="thiagoriCard mb-3 text-justify">
           <div>
             <h5>
               <b-link href="#mapAnchor" @click="switchPlace(globalView)">
@@ -17,7 +17,7 @@
             </h5>
           </div>
         </b-card>
-        <b-card class="mapCard mb-3 text-justify">
+        <b-card class="thiagoriCard mb-3 text-justify">
           <div>
             <h5>
               <b-link href="#mapAnchor" @click="switchPlace(weddingPlace)">
@@ -28,7 +28,7 @@
             <p>{{weddingPlace.address}}</p>
           </div>
         </b-card>
-        <b-card class="mapCard mb-3 text-justify">
+        <b-card class="thiagoriCard mb-3 text-justify">
           <div>
             <h5>{{$t('hotel_list')}}</h5>
           </div>
@@ -38,18 +38,22 @@
               <b-icon icon="geo"></b-icon>
               {{place.name}}
             </b-link>
-            <p>{{place.address}}</p>
+            <p>
+              {{place.address}}
+              <br />
+              {{place.distance}}
+            </p>
           </div>
         </b-card>
       </b-col>
       <b-col id="map" lg="8">
         <a id="mapAnchor"></a>
-        <b-card body-class="text-center" class="mapCard mb-5">
+        <b-card body-class="text-center" class="thiagoriCard mb-5">
           <b-card-title title-tag="h2" :title="placeName" class="mt-1 mb-3" />
           <iframe
             :src="mapURL"
             width="100%"
-            height="782px"
+            height="1022px"
             frameborder="0"
             allowfullscreen
             class="border-0 mb-4"
@@ -86,45 +90,53 @@ export default {
           mapURL:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.62501206656!2d-40.198089449079404!3d-20.191332951637637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81d2dc60527f1%3A0xe1fa699b8cb15e44!2sECO%20MANGUINHOS!5e0!3m2!1sfr!2sca!4v1579459016469!5m2!1sfr!2sca",
           address:
-            "064, R. Prof. Geraldo Costa Alves, 01 - Manguinhos, Serra - ES"
+            "064, R. Prof. Geraldo Costa Alves, 01 - Manguinhos, Serra - ES",
+          distance: "1,2 km"
         },
         {
           name: "Orchard Inn Manguinhos",
           mapURL:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.573074325389!2d-40.19725064907934!3d-20.193493751706246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81dad2ef24311%3A0xdb8ec9bbc772f50!2sOrchard%20Inn%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579464763784!5m2!1sfr!2sca",
-          address: "R. Elpídio Pímentel, 22 - Manguinhos, Serra - ES, 29173-065"
+          address:
+            "R. Elpídio Pímentel, 22 - Manguinhos, Serra - ES, 29173-065",
+          distance: "1,1 km"
         },
         {
           name: "Pousada Manguas",
           mapURL:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.561891919485!2d-40.194402049079365!3d-20.19395895172096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81c534f201ceb%3A0x45b07166de344a1b!2sPousada%20Mangas!5e0!3m2!1sfr!2sca!4v1579464879306!5m2!1sfr!2sca",
-          address: "Av. Mte. Álvaro, 186 - Manguinhos, Serra - ES, 29173-039"
+          address: "Av. Mte. Álvaro, 186 - Manguinhos, Serra - ES, 29173-039",
+          distance: "1 km"
         },
         {
           name: "Hostel Kurahay",
           mapURL:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.5960320983245!2d-40.19310554907939!3d-20.192538651675886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81dab6733292b%3A0x4b6be2aba7c40f3b!2sHostel%20Kuarahy!5e0!3m2!1sfr!2sca!4v1579465007278!5m2!1sfr!2sca",
-          address: "Av. Atapoã, 607 - Manguinhos, Serra - ES, 29173-000"
+          address: "Av. Atapoã, 607 - Manguinhos, Serra - ES, 29173-000",
+          distance: "1 km"
         },
         {
           name: "Aldeia Manguinhos",
           mapURL:
             "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14977.785651760476!2d-40.1972828!3d-20.1987624!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c991f0d8d7468d7!2sAldeia%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579470319184!5m2!1sfr!2sca",
-          address: "Av. Bicanga, 278 - Manguinhos, Serra - ES, 29164-817"
+          address: "Av. Bicanga, 278 - Manguinhos, Serra - ES, 29164-817",
+          distance: "1,8 km"
         },
 
         {
           name: "Solar de Manguinhos",
           mapURL:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.5868693050315!2d-40.19383404907931!3d-20.19291985168805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81daca67837b1%3A0x1c532dd7adcd1878!2sSolar%20de%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579465106495!5m2!1sfr!2sca",
-          address: "Av, R. Ocidente, 172 - Manguinhos, Serra - ES, 29173-047"
+          address: "Av, R. Ocidente, 172 - Manguinhos, Serra - ES, 29173-047",
+          distance: "1 km"
         },
         {
           name: "Spaço 'D Hospedagem",
           mapURL:
             "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14978.430571328767!2d-40.1970712!3d-20.1920556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x695789c04b73924a!2sSpa%C3%A7o%20D%20Hospedagem!5e0!3m2!1sfr!2sca!4v1579470570708!5m2!1sfr!2sca",
           address:
-            "R. Manoel José Lírio de Sales, 17 - Manguinhos, Serra - ES, 29173-050"
+            "R. Manoel José Lírio de Sales, 17 - Manguinhos, Serra - ES, 29173-050",
+          distance: "1,6 km"
         }
       ]
     };
@@ -152,11 +164,5 @@ a {
 #mapContainer {
   background-color: lightgray;
   height: "600px";
-}
-.mapCard {
-  border: 0;
-  box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
-  -moz-box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
-  -webkit-box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
 }
 </style>

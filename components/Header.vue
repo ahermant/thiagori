@@ -8,7 +8,7 @@
           <b-nav-item class="nav--link" href="#storyAnchor">{{ $t('our_story') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#mapAnchor">{{ $t('hotel') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#RSVPAnchor">{{ $t('rsvp') }}</b-nav-item>
-          <b-nav-item class="nav--link" href="#">{{ $t('what_to_do') }}</b-nav-item>
+          <b-nav-item class="nav--link" href="#visitAnchor">{{ $t('what_to_do') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#">{{ $t('guest_messages') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#">{{ $t('gifts') }}</b-nav-item>
         </b-navbar-nav>
@@ -23,13 +23,6 @@
         >
           <country-flag :country="lg==='en'?'gb':lg" size="normal" />
         </b-nav-item>
-        <!--         <b-nav-item-dropdown class="text-uppercase lang" :text="$t('lang')">
-          <b-dropdown-item
-            v-for="lg in availableLocales"
-            :key="lg"
-            :href="switchLocalePath(lg)"
-          >{{ lg }}</b-dropdown-item>
-        </b-nav-item-dropdown>-->
       </b-navbar-nav>
     </b-navbar>
   </header>
@@ -73,14 +66,6 @@ nav {
   margin-bottom: 20px;
   z-index: 1000;
 }
-/* 
-.lang {
-  text-align: right;
-  position: fixed;
-  right: 0.5em;
-  top: 0.5em;
-} */
-
 .langs {
   flex-direction: row;
   margin-left: auto;
@@ -90,6 +75,7 @@ nav {
   margin-left: 20px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
   :hover {
     color: rgba(0, 0, 0, 0.7);
   }
