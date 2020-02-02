@@ -5,8 +5,7 @@
       playsinline
       muted
       autoplay
-      loop
-      type="video"
+      type="video/mp4"
       src="~/assets/thiagoriIntro.mp4"
     />
     <Header />
