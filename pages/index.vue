@@ -1,10 +1,10 @@
 <template>
   <div class="w-100">
     <div>
-      <ourStory class="mx-auto px-5" />
-      <mapAndHotels class="mx-auto px-5" />
-      <rSVP class="mx-auto px-5" />
-      <visitAround class="mx-auto px-5" />
+      <ourStory class="mx-auto" />
+      <mapAndHotels class="mx-auto" />
+      <rSVP class="mx-auto" />
+      <visitAround class="mx-auto" />
       <div class="mx-auto text-center">
         <logo />
         <h1 class="title">Thiagori</h1>
