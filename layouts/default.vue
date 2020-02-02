@@ -1,14 +1,6 @@
 <template>
   <div>
-    <video
-      id="myVideo"
-      playsinline
-      muted
-      autoplay
-      loop
-      type="video"
-      src="~/assets/thiagoriIntro.mp4"
-    />
+    <video id="myVideo" playsinline muted autoplay type="video" src="~/assets/thiagoriIntro.mp4" />
     <Header />
     <nuxt />
   </div>
