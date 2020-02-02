@@ -1,7 +1,7 @@
 <template>
   <b-card id="RSVP" class="w-75 border-0 mt-0 mb-5">
     <a id="RSVPAnchor"></a>
-    <b-card-title title-tag="h2" :title="$t('rsvp')" class="text-center mt-3 mb-5" />
+    <b-card-title title-tag="h1" :title="$t('rsvp')" class="text-center mt-3 mb-5" />
     <hr class="my-4" />
     <div>
       <b-form name="rsvp-1" method="post" data-netlify="true" data-netlify-honeypot="bot-field">

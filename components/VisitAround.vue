@@ -5,7 +5,7 @@
       <b-col fluid>
         <b-card
           :title="$t('what_to_do')"
-          title-tag="h2"
+          title-tag="h1"
           class="thiagoriCard text-center text-justify"
         />
       </b-col>
