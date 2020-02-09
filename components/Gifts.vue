@@ -3,9 +3,9 @@
     <a id="giftsAnchor"></a>
     <b-card-title title-tag="h1" :title="$t('gifts')" class="text-center mt-3 mb-5" />
     <hr class="my-4" />
-    <b-row>
-      <b-col lg="8">{{$t("gifts_text")}}</b-col>
-      <b-col lg="4">
+    <b-row class="mx-auto text-center">
+      <b-col lg="8" class="mb-3">{{$t("gifts_text")}}</b-col>
+      <b-col lg="4" class="mb-3">
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick" />
           <template v-if="this.$i18n.locale==='en'">
