@@ -1,6 +1,6 @@
 <template>
   <b-card id="Gifts" class="w-75 border-0 mt-0 mb-5">
-    <a id="GiftsAnchor"></a>
+    <a id="giftsAnchor"></a>
     <b-card-title title-tag="h1" :title="$t('gifts')" class="text-center mt-3 mb-5" />
     <hr class="my-4" />
     <b-row>

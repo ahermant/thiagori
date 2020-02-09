@@ -9,8 +9,8 @@
           <b-nav-item class="nav--link" href="#mapAnchor">{{ $t('hotel') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#RSVPAnchor">{{ $t('rsvp') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#visitAnchor">{{ $t('what_to_do') }}</b-nav-item>
+          <b-nav-item class="nav--link" href="#giftsAnchor">{{ $t('gifts') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#">{{ $t('guest_messages') }}</b-nav-item>
-          <b-nav-item class="nav--link" href="#">{{ $t('gifts') }}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
       <!-- Right aligned nav items -->
