@@ -3,11 +3,7 @@
     <a id="visitAnchor"></a>
     <b-row class="m-4">
       <b-col fluid>
-        <b-card
-          :title="$t('what_to_do')"
-          title-tag="h1"
-          class="thiagoriCard text-center text-justify"
-        />
+        <h1 class="text-center text-justify">{{$t('what_to_do')}}</h1>
       </b-col>
     </b-row>
     <b-row class="m-4">
@@ -20,7 +16,7 @@
           style="max-width: 30rem;"
           class="mb-2 mx-auto thiagoriCard"
         >
-          <b-card-text class="text-justify">{{$t('busDescription')}}</b-card-text>
+          <b-card-text class="text-justify" v-html="$t('busDescription')" />
 
           <b-button target="blank" :href="$t('busLink')" variant="primary">{{$t('busButtonText')}}</b-button>
         </b-card>
@@ -45,7 +41,7 @@ export default {
 
 <style lang="scss">
 #visitContainer {
-  background-color: lightgray;
+  background-color: $backgroundColor;
   height: "600px";
 }
 #visitAnchor {

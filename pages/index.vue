@@ -1,24 +1,17 @@
 <template>
-  <div class="w-100">
+  <div class="pageBody w-100">
     <div>
       <ourStory class="mx-auto" />
       <mapAndHotels class="mx-auto" />
       <rSVP class="mx-auto" />
       <visitAround class="mx-auto" />
-      <div class="mx-auto text-center">
-        <logo />
-        <h1 class="title">Thiagori</h1>
-        <h2 class="subtitle">Simple wedding website</h2>
-        <div class="links">
-          <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-          <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-        </div>
-      </div>
+      <gifts class="mx-auto" />
     </div>
   </div>
 </template>
 
 <script>
+import Gifts from "~/components/Gifts.vue";
 import Logo from "~/components/Logo.vue";
 import OurStory from "~/components/OurStory.vue";
 import MapAndHotels from "~/components/MapAndHotels.vue";
@@ -27,6 +20,7 @@ import VisitAround from "~/components/VisitAround.vue";
 
 export default {
   components: {
+    Gifts,
     Logo,
     OurStory,
     MapAndHotels,
@@ -36,7 +30,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.pageBody {
+  font-family: "Bad Script", cursive;
+}
+
 .container {
   margin: 0 auto;
   display: flex;
@@ -46,8 +44,8 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "CreamCandy", "Quicksand", "Source Sans Pro", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

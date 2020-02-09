@@ -2,7 +2,7 @@
   <div id="mapContainer" class="w-100 text-center pt-3 mx-auto">
     <b-row class="m-4">
       <b-col fluid>
-        <b-card :title="$t('hotel')" title-tag="h1" class="thiagoriCard text-center text-justify" />
+        <h1 class="text-center text-justify">{{$t('hotel')}}</h1>
       </b-col>
     </b-row>
     <b-row class="m-4">
@@ -162,7 +162,7 @@ a {
   display: block;
 }
 #mapContainer {
-  background-color: lightgray;
+  background-color: $backgroundColor;
   height: "600px";
 }
 </style>

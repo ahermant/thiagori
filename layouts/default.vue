@@ -27,6 +27,8 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Bad+Script&display=swap");
+
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -38,6 +40,12 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: "CreamCandy", sans-serif;
+  font-size: 4rem;
+  color: darkgoldenrod;
 }
 
 *,

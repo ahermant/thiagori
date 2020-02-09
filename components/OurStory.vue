@@ -3,7 +3,7 @@
     <a id="storyAnchor"></a>
     <b-card-title title-tag="h1" :title="$t('our_story')" class="mt-3 mb-5" />
     <hr class="my-4" />
-    <b-card-text class="text-justify">{{$t('our_story_content')}}</b-card-text>
+    <b-card-text class="text-justify" v-html="$t('our_story_content')" />
   </b-card>
 </template>
 
