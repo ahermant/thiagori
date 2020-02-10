@@ -2,7 +2,7 @@
   <div id="mapContainer" class="w-100 text-center pt-3 mx-auto">
     <b-row class="m-4">
       <b-col fluid>
-        <h1 class="text-center text-justify">{{$t('hotel')}}</h1>
+        <h1 class="text-center text-justify">{{$t('wedding_place')}}</h1>
       </b-col>
     </b-row>
     <b-row class="m-4">

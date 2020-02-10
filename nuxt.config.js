@@ -71,7 +71,6 @@ export default {
               global_view: 'Vue globale',
               guest_messages: 'Laissez un message',
               greeting: 'Salut tout le monde',
-              hotel: 'Lieu de l\'événement',
               hotel_list: 'Liste des hotels à proximité',
               lang: 'Langue',
               message: 'Votre message (optionnel)',
@@ -104,7 +103,6 @@ export default {
               global_view: 'Global view',
               greeting: 'Hello world!',
               guest_messages: 'Leave a message',
-              hotel: 'Place of the event',
               hotel_list: 'Hotels nearby',
               lang: 'Lang',
               message: 'Your message (optional)',
@@ -119,8 +117,8 @@ export default {
               send: 'Send',
               thank_you_for_submission: 'Thank you for your answer !',
               want_to_attend: 'Will you particpate ?',
-              wedding_place: 'Wedding place',
-              what_to_do: 'What to do in Vitoria ?',
+              wedding_place: 'Wedding location',
+              what_to_do: 'Activities in Vitoria',
               yes: 'Yes',
               your_name: 'Firstname and name'
             }
