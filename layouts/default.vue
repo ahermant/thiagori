@@ -20,8 +20,18 @@ export default {
   components: {
     Header
   },
-  mounted() {
-    //document.getElementById("myVideo").play();
+  data() {
+    return {
+      desktopVideo: "~/static/thiagoriIntro.mp4",
+      mobileVideo: "~/static/thiagoriIntroMobile.mp4"
+    };
+  },
+  computed: {
+    introVideo() {
+      return window.screen.width >= window.screen.height
+        ? desktopVideo
+        : mobileVideo;
+    }
   }
 };
 </script>
