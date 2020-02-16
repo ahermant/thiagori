@@ -26,7 +26,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ['~/plugins/vue-countdown'],
   /*
   ** Nuxt.js dev-modules
   */
@@ -36,7 +36,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
     '@bazzite/nuxt-netlify',
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
@@ -69,7 +68,8 @@ export default {
         fallbackLocale: 'en'
       }
     ],
-    ['@nuxtjs/style-resources']
+    '@nuxtjs/style-resources',
+    '@nuxtjs/moment'
   ],
   bootstrapVue: {
     // Add the desired icon components to the `components` array

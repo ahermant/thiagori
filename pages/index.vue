@@ -1,6 +1,7 @@
 <template>
   <div class="pageBody w-100">
     <div>
+      <weddingCountdown class="mx-auto" />
       <generalInformation class="mx-auto" />
       <ourStory class="mx-auto" />
       <mapAndHotels class="mx-auto" />
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import WeddingCountdown from "~/components/WeddingCountdown.vue";
 import GeneralInformation from "~/components/GeneralInformation.vue";
 import Gifts from "~/components/Gifts.vue";
 import Logo from "~/components/Logo.vue";
@@ -22,6 +24,7 @@ import VisitAround from "~/components/VisitAround.vue";
 
 export default {
   components: {
+    WeddingCountdown,
     GeneralInformation,
     Gifts,
     Logo,
