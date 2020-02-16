@@ -1,13 +1,6 @@
 <template>
   <div class="noLineHeight">
-    <video
-      id="myVideo"
-      playsinline
-      muted
-      autoplay
-      type="video/mp4"
-      src="~/static/thiagoriIntro.mp4"
-    />
+    <video id="myVideo" playsinline muted autoplay type="video/mp4" :src="introVideo" />
     <Header />
     <nuxt />
   </div>
@@ -22,15 +15,15 @@ export default {
   },
   data() {
     return {
-      desktopVideo: "~/static/thiagoriIntro.mp4",
-      mobileVideo: "~/static/thiagoriIntroMobile.mp4"
+      desktopVideo: "/thiagoriIntro.mp4",
+      mobileVideo: "/thiagoriIntroMobile.mp4"
     };
   },
   computed: {
     introVideo() {
       return window.screen.width >= window.screen.height
-        ? desktopVideo
-        : mobileVideo;
+        ? this.desktopVideo
+        : this.mobileVideo;
     }
   }
 };
