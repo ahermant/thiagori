@@ -13,17 +13,34 @@ export default {
   components: {
     Header
   },
+  mounted() {
+    this.switchVideo();
+    window.addEventListener("resize", this.switchVideo);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.switchVideo);
+  },
   data() {
     return {
+      dynamicVideo: "/thiagoriIntro.mp4",
       desktopVideo: "/thiagoriIntro.mp4",
       mobileVideo: "/thiagoriIntroMobile.mp4"
     };
   },
   computed: {
     introVideo() {
-      return window.screen.width >= window.screen.height
-        ? this.desktopVideo
-        : this.mobileVideo;
+      return this.dynamicVideo;
+    }
+  },
+  methods: {
+    switchVideo() {
+      console.log({
+        switch: { width: window.innerWidth, height: innerHeight }
+      });
+      this.dynamicVideo =
+        window.innerWidth >= window.innerHeight
+          ? this.desktopVideo
+          : this.mobileVideo;
     }
   }
 };

@@ -3,6 +3,7 @@ export default {
     busTitle: "Tour de Vitória et Vila Velha en bus",
     busLink: "https://www.tripadvisor.fr/Attraction_Review-g303320-d9748071-Reviews-Capixaba_Turismo_Receptivo-Vitoria_State_of_Espirito_Santo.html?m=19905",
     busButtonText: "Lien tripadvisor",
+    brasilian_time: "(heure de Vitória)",
     days: 'jours',
     email_address: 'Adresse email',
     enter_email: 'Veuillez saisir votre email',
