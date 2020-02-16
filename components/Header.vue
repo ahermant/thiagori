@@ -17,11 +17,11 @@
       <b-navbar-nav class="langs" fill>
         <b-nav-item
           class="nav--link"
-          :href="switchLocalePath(lg)"
+          :href="switchLocalePath(lg.code)"
           v-for="lg in availableLocales"
-          :key="lg"
+          :key="lg.code"
         >
-          <country-flag :country="lg==='en'?'gb':lg" size="normal" />
+          <country-flag :country="lg.code==='en'?'gb':lg.code" size="normal" />
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
@@ -76,6 +76,7 @@ nav {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
+  font-family: "Bad Script", cursive;
   :hover {
     color: rgba(0, 0, 0, 0.7);
   }

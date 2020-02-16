@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="noLineHeight">
     <video
       id="myVideo"
       playsinline
       muted
       autoplay
       type="video/mp4"
-      src="~/assets/thiagoriIntro.mp4"
+      src="~/static/thiagoriIntro.mp4"
     />
     <Header />
     <nuxt />
@@ -88,5 +88,9 @@ h1 {
 #myVideo {
   min-width: 100%;
   width: 100%;
+}
+
+.noLineHeight {
+  line-height: 0;
 }
 </style>

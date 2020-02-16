@@ -1,6 +1,7 @@
 <template>
   <div class="pageBody w-100">
     <div>
+      <generalInformation class="mx-auto" />
       <ourStory class="mx-auto" />
       <mapAndHotels class="mx-auto" />
       <rSVP class="mx-auto" />
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+import GeneralInformation from "~/components/GeneralInformation.vue";
 import Gifts from "~/components/Gifts.vue";
 import Logo from "~/components/Logo.vue";
 import OurStory from "~/components/OurStory.vue";
@@ -20,6 +22,7 @@ import VisitAround from "~/components/VisitAround.vue";
 
 export default {
   components: {
+    GeneralInformation,
     Gifts,
     Logo,
     OurStory,
@@ -33,6 +36,7 @@ export default {
 <style lang="scss">
 .pageBody {
   font-family: "Bad Script", cursive;
+  line-height: 1.5;
 }
 
 .container {
