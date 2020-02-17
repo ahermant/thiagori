@@ -28,7 +28,17 @@
     </b-navbar>
     <b-modal id="contactModal" hide-footer hide-header class="mx-auto">
       <div class="modal-header">
-        <h1 class="col-12 modal-title text-center">{{$t('guest_messages')}}</h1>
+        <h1 class="col-12 modal-title text-center">
+          {{$t('guest_messages')}}
+          <button
+            type="button"
+            class="close"
+            @click="$bvModal.hide('contactModal')"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">X</span>
+          </button>
+        </h1>
       </div>
       <contact-form />
     </b-modal>
@@ -54,6 +64,10 @@ export default {
 </script>
 
 <style lang="scss">
+button {
+  outline: none;
+}
+
 .modal-title {
   font-family: "CreamCandy", sans-serif;
   font-size: 4rem;
