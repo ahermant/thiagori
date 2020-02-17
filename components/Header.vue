@@ -11,7 +11,7 @@
           <b-nav-item class="nav--link" href="#RSVPAnchor">{{ $t('rsvp') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#visitAnchor">{{ $t('what_to_do') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#giftsAnchor">{{ $t('gifts') }}</b-nav-item>
-          <b-nav-item class="nav--link" href="#">{{ $t('guest_messages') }}</b-nav-item>
+          <b-nav-item class="nav--link" v-b-modal.contactModal href="#">{{ $t('guest_messages') }}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
       <!-- Right aligned nav items -->
@@ -26,14 +26,19 @@
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
+    <b-modal id="contactModal" hide-footer class="mx-auto" :title="$t('guest_messages')">
+      <contact-form />
+    </b-modal>
   </header>
 </template>
 
 <script>
 import CountryFlag from "vue-country-flag";
+import ContactForm from "~/components/ContactForm.vue";
 
 export default {
   components: {
+    ContactForm,
     CountryFlag
   },
   computed: {
@@ -46,6 +51,18 @@ export default {
 </script>
 
 <style lang="scss">
+.modal-title {
+  font-family: "CreamCandy", sans-serif;
+  font-size: 4rem;
+  color: darkgoldenrod;
+  margin: auto;
+}
+
+.modal-body {
+  font-weight: bold;
+  font-family: "Bad Script", cursive;
+}
+
 nav {
   width: 100%;
   padding-top: 1rem;
