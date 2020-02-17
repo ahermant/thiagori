@@ -2,21 +2,21 @@
   <b-card id="Contact" class="border-0 mt-0 mb-5">
     <div>
       <b-form
-        name="contactMessages"
+        name="contactMessages-1"
         method="post"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        data-netlify-honeypot="bot-field2"
       >
         <input type="hidden" name="form-name" value="messages" />
         <p class="hidden">
           <label>
             Don’t fill this out if you're human:
-            <input name="bot-field" />
+            <input name="bot-field2" />
           </label>
         </p>
         <b-row>
           <b-col lg="6">
-            <b-form-group id="input-group-2" :label="$t('your_name')" label-for="name">
+            <b-form-group :label="$t('your_name')" label-for="name">
               <b-form-input
                 id="name"
                 name="name"
@@ -27,7 +27,7 @@
             </b-form-group>
           </b-col>
           <b-col lg="6">
-            <b-form-group id="input-group-1" :label="$t('email_address')" label-for="email">
+            <b-form-group :label="$t('email_address')" label-for="email">
               <b-form-input
                 id="email"
                 name="email"

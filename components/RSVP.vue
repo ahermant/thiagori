@@ -4,12 +4,12 @@
     <b-card-title title-tag="h1" :title="$t('rsvp')" class="text-center mt-3 mb-5" />
     <hr class="my-4" />
     <div>
-      <b-form name="rsvp-1" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <b-form name="rsvp-1" method="post" data-netlify="true" data-netlify-honeypot="bot-field1">
         <input type="hidden" name="form-name" value="rsvp-1" />
         <p class="hidden">
           <label>
             Don’t fill this out if you're human:
-            <input name="bot-field" />
+            <input name="bot-field1" />
           </label>
         </p>
         <b-row>
