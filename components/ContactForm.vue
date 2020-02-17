@@ -2,12 +2,12 @@
   <b-card id="Contact" class="border-0 mt-0 mb-5">
     <div>
       <b-form
-        name="contactmessages"
+        name="contactMessages"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field2"
       >
-        <input type="hidden" name="form-name" value="messages" />
+        <input type="hidden" name="form-name" value="contactMessages" />
         <p class="hidden">
           <label>
             Don’t fill this out if you're human:
