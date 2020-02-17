@@ -2,7 +2,7 @@
   <b-card id="Contact" class="border-0 mt-0 mb-5">
     <div>
       <b-form
-        name="contactMessages-1"
+        name="contactmessages"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field2"
