@@ -1,7 +1,12 @@
 <template>
   <b-card id="Contact" class="border-0 mt-0 mb-5">
     <div>
-      <b-form name="messages" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <b-form
+        name="contactMessages"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
         <input type="hidden" name="form-name" value="messages" />
         <p class="hidden">
           <label>
@@ -49,7 +54,7 @@
         </b-row>
         <b-row>
           <b-col>
-            <div class="text-center mt-5">
+            <div class="text-center mt-5 mb-0">
               <b-button type="submit" name="submit" variant="primary">{{$t('send')}}</b-button>
             </div>
           </b-col>

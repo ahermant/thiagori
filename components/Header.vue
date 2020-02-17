@@ -26,7 +26,10 @@
         </b-nav-item>
       </b-navbar-nav>
     </b-navbar>
-    <b-modal id="contactModal" hide-footer class="mx-auto" :title="$t('guest_messages')">
+    <b-modal id="contactModal" hide-footer hide-header class="mx-auto">
+      <div class="modal-header">
+        <h1 class="col-12 modal-title text-center">{{$t('guest_messages')}}</h1>
+      </div>
       <contact-form />
     </b-modal>
   </header>

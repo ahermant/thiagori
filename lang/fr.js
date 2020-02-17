@@ -26,7 +26,7 @@ export default {
     hotel_list: 'Liste des hotels à proximité',
     hours: 'heures',
     lang: 'Langue',
-    message: 'Votre message (optionnel)',
+    message: 'Votre message',
     message_allowed: 'Si vous souhaitez préciser certains éléments ou nous envoyer un message, vous pouvez l\'écrire ici.',
     minutes: 'minutes',
     no: 'Non',
