@@ -6,8 +6,32 @@
       <ourStory class="mx-auto" />
       <mapAndHotels class="mx-auto" />
       <rSVP class="mx-auto" />
-      <visitAround class="mx-auto" />
-      <gifts class="mx-auto" />
+      <template v-if="$i18n.locale!=='br'">
+        <visitAround
+          :activities="activities_victoria"
+          v-if="activities_victoria"
+          sm="12"
+          xl="4"
+          backgroundColor
+          class="mx-auto"
+        />
+        <visitAround
+          v-if="activities_vilha_velha"
+          :activities="activities_vilha_velha"
+          sm="12"
+          xl="3"
+          class="mx-auto"
+        />
+        <visitAround
+          v-if="activities_nova_almeida"
+          :activities="activities_nova_almeida"
+          sm="12"
+          xl="6"
+          backgroundColor
+          class="mx-auto"
+        />
+      </template>
+      <gifts class="mx-auto" :class="$i18n.locale==='br'?'backgroundColored':''" />
     </div>
   </div>
 </template>
@@ -32,11 +56,48 @@ export default {
     MapAndHotels,
     RSVP,
     VisitAround
+  },
+  data: function() {
+    return {
+      activities_nova_almeida: {},
+      activities_victoria: {},
+      activities_vilha_velha: {}
+    };
+  },
+  computed: {
+    lang() {
+      return this.$i18n.locale;
+    }
+  },
+  methods: {
+    setActivities() {
+      if (this.$i18n.locale !== "br") {
+        const activities = this.$i18n.messages[this.$i18n.locale].activities;
+        console.log({ activities: activities, locale: this.$i18n.locale });
+        this.activities_nova_almeida = activities.nova_almeida;
+        this.activities_victoria = activities.victoria;
+        this.activities_vilha_velha = activities.vilha_velha;
+      }
+    }
+  },
+  mounted() {
+    console.log({ locale: this.$i18n.locale });
+    this.setActivities();
+  },
+  watch: {
+    lang: function(val) {
+      console.log({ locale: this.$i18n.locale });
+      this.setActivities();
+    }
   }
 };
 </script>
 
 <style lang="scss">
+.backgroundColored {
+  background-color: $backgroundColor;
+}
+
 .pageBody {
   font-family: "Bad Script", cursive;
   line-height: 1.5;

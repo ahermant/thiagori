@@ -1,4 +1,111 @@
 export default {
+    activities: {
+        victoria: {
+            what_to_do: 'Activités à Vitoria',
+            places: {
+                anchieta: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408058-Reviews-Palacio_Anchieta-Vitoria_State_of_Espirito_Santo.html",
+                    title: "Palais Anchieta et ses expositions diverses (gratuit)",
+                    image: "anchieta.jpg"
+                },
+                boi: {
+                    description: "Partie bourgeoise de Vitoria, belle plage pour se baigner et se reposer",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408054-Reviews-Boi_Island-Vitoria_State_of_Espirito_Santo.html",
+                    title: "Plage de l’île de Boi - Ilha do Boi (gratuit)",
+                    image: "boi.jpg"
+                },
+                bus: {
+                    description: "Vitória has a panoramic tour bus, which has an open top for passengers to have a privileged and wide view of the city. The city tour service takes place on Wednesdays, Saturdays, Sundays and holidays and runs through several attractions. The vehicle has 49 seats available, including for the elderly, pregnant women and people with reduced mobility.<br/>Price: 70 reais per person + 5 to go up to the covent by van.<br/>Languages: English, Brasilian",
+                    link: "https://www.tripadvisor.co.uk/Attraction_Review-g303320-d9748071-Reviews-Capixaba_Turismo_Receptivo-Vitoria_State_of_Espirito_Santo.html?m=19905",
+                    title: "Vitória and Vila Velha bus tour",
+                    image: "bus.jpg"
+                },
+                catedral: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408045-Reviews-Metropolitana_Cathedral-Vitoria_State_of_Espirito_Santo.html",
+                    title: "Cathédrale de Vitoria (gratuit)",
+                    image: "catedral.jpg"
+                },
+                cebola: {
+                    description: "Joli parc à visiter",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408061-Reviews-Parque_Pedra_da_Cebola-Vitoria_State_of_Espirito_Santo.html",
+                    title: "Parc Pedra da Cebola (gratuit)",
+                    image: "cebola.jpg"
+                },
+                camburi: {
+                    description: "Super pour se balader ou louer un vélo",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408063-Reviews-Camburi_Beach-Vitoria_State_of_Espirito_Santo.html",
+                    title: "La plage Orla de Camburi (gratuit)",
+                    image: "camburi.jpg"
+                },
+                frade: {
+                    description: "Partie bourgeoise de Vitoria, belle plage pour se baigner et se reposer",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303320-d10423112-Reviews-Ilha_do_Frade-Vitoria_State_of_Espirito_Santo.html",
+                    title: "Plage de l’île de Frade - Ilha do Frade (gratuit)",
+                    image: "frade.jpg"
+                },
+                tamar: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303320-d6436878-Reviews-Projeto_Tamar_Vitoria-Vitoria_State_of_Espirito_Santo.html",
+                    title: "Projet Tamar – Observatoire de tortues de mer – prix = R$15",
+                    image: "tamar.jpg"
+                },
+                teatro: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303320-d4127203-Reviews-Gloria_Theater-Vitoria_State_of_Espirito_Santo.html",
+                    title: "Théâtre Sesc Gloria – Centre culturel (gratuit)",
+                    image: "teatro.jpg"
+                }
+            }
+        },
+        vilha_velha: {
+            what_to_do: 'Activités à Vilha Velha',
+            places: {
+                chocolate: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303319-d10807919-Reviews-Museu_Garoto-Vila_Velha_State_of_Espirito_Santo.html",
+                    title: "Visitez la chocolaterie et musée du chocolat Garoto : Fabrica de chocolates GAROTO e Museu Chocolates Garoto (prix = R$10 reais)",
+                    image: "chocolate.jpg"
+                },
+                covento: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303319-d2408107-Reviews-Nossa_Senhora_da_Penha_Convent-Vila_Velha_State_of_Espirito_Santo.html",
+                    title: "Visitez le couvent Nossa Senhora da Penha et profitez de la vue exceptionnelle (gratuit)",
+                    image: "covento.jpg"
+                },
+                lightHouse: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303319-d8533291-Reviews-Farol_de_Santa_Luzia-Vila_Velha_State_of_Espirito_Santo.html",
+                    title: "Visitez le phare : Farol Santa Luzia (gratuit)",
+                    image: "lightHouse.jpg"
+                },
+                museum: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303319-d4377760-Reviews-Museu_Vale-Vila_Velha_State_of_Espirito_Santo.html",
+                    title: "Visitez le musée du Vale (gratuit) – musée ferroviaire",
+                    image: "museum.jpg"
+                }
+            }
+        },
+        nova_almeida: {
+            what_to_do: 'Activités à Nova Almeida? (Proche du  lieu de la cérémonie)',
+            places: {
+                igreja: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g303319-d10807919-Reviews-Museu_Garoto-Vila_Velha_State_of_Espirito_Santo.html",
+                    title: "Visitez l’église “Igreja dos Reis Magos” (gratuit) et le site historique et archéologique Reis Magos (gratuit) ",
+                    image: "igreja.jpg"
+                },
+                pedra: {
+                    description: "",
+                    link: "https://www.tripadvisor.com/Attraction_Review-g2342774-d4377595-Reviews-Stone_House-Serra_State_of_Espirito_Santo.html",
+                    title: "Visitez la maison de pierre : Casa de Pedra (gratuit)",
+                    image: "pedra.jpg"
+                }
+            }
+        },
+    },
     busDescription: "Le bus panoramique de Vitória a un toit ouvert pour que les passagers aient une vue privilégiée et large de la ville. Le service de visite de la ville a lieu les mercredis, samedis, dimanches et jours fériés et passe par plusieurs attractions. Le véhicule dispose de 49 places disponibles, y compris pour les personnes âgées, les femmes enceintes et les personnes à mobilité réduite.<br/>Prix: 70 reais par personne + 5 pour aller au couvent Da Penha en van.<br/>Langues: Brésilien, Anglais",
     busTitle: "Tour de Vitória et Vila Velha en bus",
     busLink: "https://www.tripadvisor.fr/Attraction_Review-g303320-d9748071-Reviews-Capixaba_Turismo_Receptivo-Vitoria_State_of_Espirito_Santo.html?m=19905",
@@ -9,6 +116,8 @@ export default {
     enter_email: 'Veuillez saisir votre email',
     enter_name: 'Veuillez saisir votre prénom et votre nom',
     general_information: 'Informations générales',
+    general_information_brunch: 'Brunch',
+    general_information_brunch_content: '<p>Vous êtes invités à la maison de plage des parents de Thiago le lendemain du mariage. La maison se trouve à Fundão, à cette adresse :<br/><a href=\'https://goo.gl/maps/iTHmSHgNtJQD3txN6\' target=\'_blank\'>Av. Uirapuru, 01 - Enseada das Garças, Fundão - ES, 29185-000 Brésil</a></p>',
     general_information_photos_videos: 'Photos / Vidéos',
     general_information_photos_videos_content: '<p>Nous autorisons et encourageons les invités à partager leur photos et vidéos sur leurs réseaux sociaux, nous vous demanderions simplement de tagger chaque photo avec le hashtag de notre mariage <em><strong>#thiagori&nbsp;</strong></em>dans le but de nous aider à les retrouver! Merci <span lang="fr-FR">😊</span></p>',
     general_information_questions: 'Questions ?',
@@ -24,6 +133,9 @@ export default {
     guest_messages: 'Laissez un message',
     greeting: 'Salut tout le monde',
     hotel_list: 'Liste des hotels à proximité',
+    hotel_list_vitoria: 'Hotels proches de Vitória',
+    hotel_list_nova_almeida: 'Hôtels proches de Nova Almeida',
+    hotel_list_beach_house: 'Hôtels juste en face de la maison de plage des parents de Thiago (Brunch le lendemain du mariage)',
     hours: 'heures',
     lang: 'Langue',
     message: 'Votre message',

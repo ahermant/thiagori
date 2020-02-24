@@ -1,26 +1,34 @@
 <template>
-  <div id="visitContainer" class="w-100 text-center py-3 mx-auto">
+  <div id="visitContainer" :class="backgroundColorStyle" class="w-100 text-center py-3 mx-auto">
     <a id="visitAnchor"></a>
     <b-row class="m-4">
       <b-col fluid>
-        <h1 class="text-center text-justify">{{$t('what_to_do')}}</h1>
+        <h1 class="text-center text-justify">{{activities.what_to_do}}</h1>
       </b-col>
     </b-row>
     <b-row class="m-4">
-      <b-col fluid>
-        <b-card
-          :title="$t('busTitle')"
-          img-src="https://www.vitoria.es.gov.br/imagens/banco/2018_07/img_00067521.jpg"
-          img-alt="Image"
-          img-top
-          style="max-width: 30rem;"
-          class="mb-2 mx-auto thiagoriCard"
-        >
-          <b-card-text class="text-justify" v-html="$t('busDescription')" />
-
-          <b-button target="blank" :href="$t('busLink')" variant="primary">{{$t('busButtonText')}}</b-button>
-        </b-card>
-      </b-col>
+      <b-card-group deck class="w-100">
+        <b-col :sm="sm" :lg="lg" :xl="xl" v-for="(place, i) in activities.places" v-bind:key="i">
+          <b-card
+            :title="place.title"
+            :img-src="place.image"
+            img-alt="Image"
+            img-top
+            style
+            class="mb-5 mx-auto thiagoriCard visitCard"
+            body-class="text-center"
+          >
+            <b-card-text class="text-justify" v-html="place.description" />
+            <b-card-footer footer-bg-variant="white">
+              <b-button
+                target="blank"
+                :href="place.link"
+                variant="primary"
+              >{{$t('tripadvisorButtonText')}}</b-button>
+            </b-card-footer>
+          </b-card>
+        </b-col>
+      </b-card-group>
     </b-row>
   </div>
 </template>
@@ -28,20 +36,40 @@
 <script>
 export default {
   data: function() {
-    return {
-      busLink: "https://www.capixabaturismo.com.br/bustour/",
-      busButtonText: "Official website (Portuguese)"
-    };
+    return {};
   },
-  computed: {},
+  computed: {
+    backgroundColorStyle: function() {
+      return this.backgroundColor ? "backgroundColored" : "white";
+    }
+  },
+  props: {
+    activities: {
+      type: Object,
+      default: { what_to_do: "" }
+    },
+    backgroundColor: Boolean,
+    sm: String,
+    lg: String,
+    xl: String
+  },
   methods: {},
-  mount() {}
+  mounted() {}
 };
 </script>
 
 <style lang="scss">
+.visitCard {
+  max-width: 30rem;
+  height: 550px;
+  .card-footer {
+    bottom: 10px;
+    position: absolute;
+    width: 90%;
+  }
+}
+
 #visitContainer {
-  background-color: $backgroundColor;
   height: "600px";
 }
 #visitAnchor {

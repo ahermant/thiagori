@@ -112,6 +112,7 @@ nav {
   color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
   font-family: "Bad Script", cursive;
+  line-height: 1.5em;
   :hover {
     color: rgba(0, 0, 0, 0.7);
   }
