@@ -30,7 +30,7 @@
         </b-card>
         <hotelsCard
           :hotelsList="hotelsList.novaAlmeida"
-          v-on:changePlace="switchPlace"
+          @placeChange="switchPlace"
           :title="$t('hotel_list_nova_almeida')"
         />
       </b-col>
@@ -139,6 +139,7 @@ export default {
   computed: {},
   methods: {
     switchPlace(place) {
+      console.log({ switchPlace: place, this: this });
       this.placeName = place.name;
       this.mapURL = place.mapURL;
     }
