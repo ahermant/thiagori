@@ -62,11 +62,10 @@ export default {
       if (promise !== undefined) {
         promise
           .catch(error => {
-            alert(error);
+            console.error(error);
           })
           .then(() => {
-            alert("All good");
-            this.controls = false;
+            console.log("All good");
           });
       }
     },
