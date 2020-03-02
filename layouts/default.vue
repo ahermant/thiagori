@@ -7,7 +7,6 @@
         playsinline
         :controls="controls"
         muted
-        autoplay
         type="video/mp4"
         :src="introVideo"
       />
