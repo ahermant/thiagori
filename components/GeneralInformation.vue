@@ -20,7 +20,7 @@
       <b-card-text v-html="$t('general_information_questions_content')" />
 
       <hr class="my-4" />
-      <template v-if="$i18n.locale!=='br'">
+      <template v-if="$i18n.locale==='fr'">
         <b-card-title
           title-tag="h2"
           :title="$t('general_information_not_brazilians')"

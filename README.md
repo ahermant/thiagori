@@ -1,4 +1,4 @@
-# thiagori
+# Thiagori
 
 > Simple wedding website
 

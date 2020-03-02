@@ -1,5 +1,5 @@
 <template>
-  <b-card class="thiagoriCard mb-3 text-justify">
+  <b-card :style="styleHeight" class="thiagoriCard limitedHeight mb-3 text-justify">
     <div>
       <h5>{{title}}</h5>
     </div>
@@ -20,15 +20,21 @@
 
 <script>
 export default {
+  computed: {
+    styleHeight() {
+      return "height:" + this.height;
+    }
+  },
   props: {
     title: String,
-    hotelsList: Array
+    hotelsList: Array,
+    height: String
   }
 };
 </script>
 
 <style lang="scss">
-.hidden {
-  display: none;
+.limitedHeight {
+  overflow: auto;
 }
 </style>

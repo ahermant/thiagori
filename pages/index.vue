@@ -7,6 +7,7 @@
       <mapAndHotels class="mx-auto" />
       <rSVP class="mx-auto" />
       <template v-if="$i18n.locale!=='br'">
+        <a id="visitAnchor"></a>
         <visitAround
           :activities="activities_victoria"
           v-if="activities_victoria"
@@ -14,6 +15,7 @@
           xl="4"
           backgroundColor
           class="mx-auto"
+          height="580px"
         />
         <visitAround
           v-if="activities_vilha_velha"
@@ -21,6 +23,7 @@
           sm="12"
           xl="3"
           class="mx-auto"
+          height="550px"
         />
         <visitAround
           v-if="activities_nova_almeida"
@@ -29,6 +32,7 @@
           xl="6"
           backgroundColor
           class="mx-auto"
+          height="650px"
         />
       </template>
       <gifts class="mx-auto" :class="$i18n.locale==='br'?'backgroundColored':''" />
@@ -138,5 +142,11 @@ export default {
   box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
   -moz-box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
   -webkit-box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
+}
+
+#visitAnchor {
+  position: relative;
+  top: -10em;
+  display: block;
 }
 </style>

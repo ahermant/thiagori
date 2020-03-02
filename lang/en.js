@@ -16,7 +16,7 @@ export default {
                     image: "boi.jpg"
                 },
                 bus: {
-                    description: "Vitória has a panoramic tour bus, which has an open top for passengers to have a privileged and wide view of the city. The city tour service takes place on Wednesdays, Saturdays, Sundays and holidays and runs through several attractions. The vehicle has 49 seats available, including for the elderly, pregnant women and people with reduced mobility.<br/>Price: 70 reais per person + 5 to go up to the covent by van.<br/>Languages: English, Brasilian",
+                    description: "Vitória has a panoramic tour bus. The city tour service takes place on Wednesdays, Saturdays, Sundays and holidays. The vehicle has seats available for the pregnant women and people with reduced mobility.<br/>Price: 70 reais per person + 5 to go up to the covent by van.<br/>Languages: English, Brasilian",
                     link: "https://www.tripadvisor.co.uk/Attraction_Review-g303320-d9748071-Reviews-Capixaba_Turismo_Receptivo-Vitoria_State_of_Espirito_Santo.html?m=19905",
                     title: "Vitória and Vila Velha bus tour",
                     image: "bus.jpg"
@@ -129,11 +129,12 @@ export default {
     greeting: 'Hello world!',
     guest_messages: 'Leave a message',
     hotel_list: 'Hotels nearby',
-    hotel_list_vitoria: 'Hotels near Vitória',
-    hotel_list_nova_almeida: 'Hotels near Nova Almeida',
+    hotel_list_vitoria: 'Hotels near Vitória (closest big city)',
+    hotel_list_nova_almeida: 'Hotels near Nova Almeida (ceremony place)',
     hotel_list_beach_house: 'Hotel right in front of Thiago’s parents Beach House (Brunch on the day after)',
     hours: 'hours',
     lang: 'Lang',
+    map_hotels: 'Maps and hotels',
     message: 'Your message',
     message_allowed: 'If you want to give us more details or send us a message, you can write it here.',
     minutes: 'minutes',

@@ -88,4 +88,9 @@ export default {
 .h-300 {
   height: 300px;
 }
+#giftsAnchor {
+  position: relative;
+  top: -10em;
+  display: block;
+}
 </style>

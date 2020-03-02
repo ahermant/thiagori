@@ -2,21 +2,12 @@
   <div id="mapContainer" class="w-100 text-center pt-3 mx-auto">
     <b-row class="m-4">
       <b-col fluid>
-        <h1 class="text-center text-justify">{{$t('wedding_place')}}</h1>
+        <h1 class="text-center text-justify">{{$t('map_hotels')}}</h1>
+        <a id="mapAnchor"></a>
       </b-col>
     </b-row>
     <b-row class="m-4">
       <b-col lg="4">
-        <b-card class="thiagoriCard mb-3 text-justify">
-          <div>
-            <h5>
-              <b-link href="#mapAnchor" @click="switchPlace(globalView)">
-                <b-icon icon="geo"></b-icon>
-                {{globalView.name}}
-              </b-link>
-            </h5>
-          </div>
-        </b-card>
         <b-card class="thiagoriCard mb-3 text-justify">
           <div>
             <h5>
@@ -29,19 +20,32 @@
           </div>
         </b-card>
         <hotelsCard
+          :hotelsList="hotelsList.vitoria"
+          @placeChange="switchPlace"
+          :title="$t('hotel_list_vitoria')"
+          height="440px"
+        />
+        <hotelsCard
           :hotelsList="hotelsList.novaAlmeida"
           @placeChange="switchPlace"
           :title="$t('hotel_list_nova_almeida')"
+          height="375px"
+        />
+        <hotelsCard
+          :hotelsList="hotelsList.beachHouse"
+          @placeChange="switchPlace"
+          :title="$t('hotel_list_beach_house')"
+          height="230px"
+          v-if="$i18n.locale==='fr'"
         />
       </b-col>
       <b-col id="map" lg="8">
-        <a id="mapAnchor"></a>
         <b-card body-class="text-center" class="thiagoriCard mb-5">
           <b-card-title title-tag="h2" :title="placeName" class="mt-1 mb-3" />
           <iframe
             :src="mapURL"
             width="100%"
-            height="1022px"
+            height="1075px"
             frameborder="0"
             allowfullscreen
             class="border-0 mb-4"
@@ -61,16 +65,10 @@ export default {
   },
   data: function() {
     return {
-      placeName: this.$t("global_view"),
+      placeName: this.$t("wedding_place"),
       mapURL:
-        "https://www.google.com/maps/d/embed?mid=1j8G5m3OwD0yMvFygQC2NLDbasECnq2jE&z=14",
-      address: "",
-      globalView: {
-        name: this.$t("global_view"),
-        mapURL:
-          "https://www.google.com/maps/d/embed?mid=1j8G5m3OwD0yMvFygQC2NLDbasECnq2jE&z=14",
-        address: ""
-      },
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.733603092703!2d-40.19286894907956!3d-20.18681445149419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81da9518a53c3%3A0xff0535f8c34a60e0!2sAv.%20Atapo%C3%A3%2C%201%20-%20Manguinhos%2C%20Serra%20-%20ES%2C%2029173-000%2C%20Br%C3%A9sil!5e0!3m2!1sfr!2sca!4v1579458564783!5m2!1sfr!2sca4",
+      address: "Av. Atapoã, 1 - Manguinhos, Serra - ES, 29173-000",
       weddingPlace: {
         name: this.$t("wedding_place"),
         mapURL:
@@ -78,6 +76,16 @@ export default {
         address: "Av. Atapoã, 1 - Manguinhos, Serra - ES, 29173-000"
       },
       hotelsList: {
+        beachHouse: [
+          {
+            name: "Pousada Terra Mar",
+            mapURL:
+              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.4373456735866!2d-40.162200449082064!3d-20.03211604660085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb7f06ec774ffc7%3A0xe6580e136c47e90b!2sPousada%20Terra%20Mar!5e0!3m2!1sfr!2sca!4v1583102316280!5m2!1sfr!2sca",
+            address:
+              "Av. Uirapurú, 01, Enseada das Garças - Praia Grande, Fundão - ES, 29187-000",
+            distance: "<500m"
+          }
+        ],
         novaAlmeida: [
           {
             name: "Eco Manguinhos",
@@ -131,6 +139,65 @@ export default {
             address:
               "R. Manoel José Lírio de Sales, 17 - Manguinhos, Serra - ES, 29173-050",
             distance: "1,6 km"
+          },
+          {
+            name: "Hotel Jardins",
+            mapURL:
+              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.1881562400963!2d-40.26334154907891!3d-20.209500852214912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81ed3db286d57%3A0xda6fd12cde857456!2sES-010%2C%201307%20-%20Jardim%20Limoeiro%2C%20Serra%20-%20ES%2C%2029194-043%2C%20Br%C3%A9sil!5e0!3m2!1sfr!2sca!4v1583102730913!5m2!1sfr!2sca",
+            address: "ES-010, 1307 - Jardim Limoeiro, Serra - ES, 29194-043",
+            distance: "8,8 km"
+          }
+        ],
+        vitoria: [
+          {
+            name: "Bristol Easy Hotel",
+            mapURL:
+              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.2876555361167!2d-40.305876985079536!3d-20.28835718640403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817fc8302dc0b%3A0x6937d7b2ee3537b1!2sBristol%20Easy%20Hotel%20-%20Reta%20da%20Penha!5e0!3m2!1sfr!2sca!4v1583102866437!5m2!1sfr!2sca",
+            address:
+              "Reta da Penha, Av. Nossa Sra. da Penha, 2656 - Santa Luíza, Vitória - ES, 29045-402",
+            distance: "21,2km"
+          },
+
+          {
+            name: "Quality Hotel Aeroporto Vitória",
+            mapURL:
+              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.683801418747!2d-40.28968868507997!3d-20.27194438641316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb8183d935bac9b%3A0x2153f66cebd089ff!2sQuality%20Hotel%20Aeroporto%20Vit%C3%B3ria!5e0!3m2!1sfr!2sca!4v1583104464162!5m2!1sfr!2sca",
+            address:
+              "Av. Adalberto Simão Nader, 605 - Mata da Praia, Vitória - ES, 29066-310",
+            distance: "18,7km"
+          },
+          {
+            name: "Hotel ibis budget Vitoria",
+            mapURL:
+              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.1443504920626!2d-40.3041047490775!3d-20.294291354915487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817e670b67b53%3A0x582c73bc27d23400!2sHotel%20ibis%20budget%20Vitoria!5e0!3m2!1sfr!2sca!4v1583104511167!5m2!1sfr!2sca",
+            address:
+              "Av. Nossa Sra. da Penha, 1993 - Santa Lucia, Vitória - ES, 29056-075",
+            distance: "20,9km"
+          },
+          {
+            name: "Hotel Senac Ilha do Boi",
+            mapURL:
+              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.757993899818!2d-40.28501904907729!3d-20.310281855426027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817bb8cbb8f7f%3A0xe42395a325a9f7f2!2sHotel%20Senac%20Ilha%20do%20Boi!5e0!3m2!1sfr!2sca!4v1583104556742!5m2!1sfr!2sca",
+            address:
+              "R. Bráulio Macedo, 417 - Ilha do Boi, Vitória - ES, 29052-640",
+            distance: "25km"
+          },
+
+          {
+            name: "Sheraton Vitoria Hotel",
+            mapURL:
+              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.868957033727!2d-40.29548454907742!3d-20.305690555279455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817c1e855d219%3A0x9f1f0d3d72748793!2sSheraton%20Vitoria%20Hotel!5e0!3m2!1sfr!2sca!4v1583104626314!5m2!1sfr!2sca",
+            address:
+              "Saturnino De Brito Avenue 217 - Praia do Canto, Vitória - ES, 29055-095",
+            distance: "21,8km"
+          },
+          {
+            name: "Golden Tulip Porto Vitória",
+            mapURL:
+              "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.6277888926393!2d-40.29821954907709!3d-20.315668055598223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb817ce8b8b2851%3A0x308310efb5301d2e!2sGolden%20Tulip%20Porto%20Vit%C3%B3ria!5e0!3m2!1sfr!2sca!4v1583104702125!5m2!1sfr!2sca",
+            address:
+              "Av. Nossa Sra. dos Navegantes, 635 - Enseada do Suá, Vitória - ES, 29050-335",
+            distance: "23,1km"
           }
         ]
       }

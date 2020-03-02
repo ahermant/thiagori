@@ -1,8 +1,12 @@
 <template>
   <div class="noLineHeight">
+    <a id="topAnchor"></a>
     <video id="myVideo" playsinline muted autoplay type="video/mp4" :src="introVideo" />
     <Header />
     <nuxt />
+    <b-link href="#topAnchor">
+      <b-icon icon="chevron-up" class="upBtn rounded-circle border p-1" variant="dark" />
+    </b-link>
   </div>
 </template>
 
@@ -46,13 +50,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Bad+Script&display=swap");
 
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1.2em;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -112,5 +116,23 @@ h1 {
 
 .noLineHeight {
   line-height: 0;
+}
+
+.upBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
+  -moz-box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
+  font-weight: bolder;
+}
+
+#topAnchor {
+  position: absolute;
+  top: 0;
 }
 </style>

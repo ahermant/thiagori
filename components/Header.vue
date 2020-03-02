@@ -7,9 +7,13 @@
         <b-navbar-nav fill>
           <b-nav-item class="nav--link" href="#infoAnchor">{{ $t('general_information') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#storyAnchor">{{ $t('our_story') }}</b-nav-item>
-          <b-nav-item class="nav--link" href="#mapAnchor">{{ $t('wedding_place') }}</b-nav-item>
+          <b-nav-item class="nav--link" href="#mapAnchor">{{ $t('map_hotels') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#RSVPAnchor">{{ $t('rsvp') }}</b-nav-item>
-          <b-nav-item class="nav--link" href="#visitAnchor">{{ $t('what_to_do') }}</b-nav-item>
+          <b-nav-item
+            class="nav--link"
+            v-if="$i18n.locale!=='br'"
+            href="#visitAnchor"
+          >{{ $t('what_to_do') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#giftsAnchor">{{ $t('gifts') }}</b-nav-item>
           <b-nav-item class="nav--link" v-b-modal.contactModal href="#">{{ $t('guest_messages') }}</b-nav-item>
         </b-navbar-nav>

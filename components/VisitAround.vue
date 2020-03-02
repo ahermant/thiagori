@@ -1,6 +1,5 @@
 <template>
-  <div id="visitContainer" :class="backgroundColorStyle" class="w-100 text-center py-3 mx-auto">
-    <a id="visitAnchor"></a>
+  <div class="w-100 text-center py-3 mx-auto" :class="backgroundColorStyle">
     <b-row class="m-4">
       <b-col fluid>
         <h1 class="text-center text-justify">{{activities.what_to_do}}</h1>
@@ -14,7 +13,7 @@
             :img-src="place.image"
             img-alt="Image"
             img-top
-            style
+            :style="styledHeight"
             class="mb-5 mx-auto thiagoriCard visitCard"
             body-class="text-center"
           >
@@ -41,6 +40,9 @@ export default {
   computed: {
     backgroundColorStyle: function() {
       return this.backgroundColor ? "backgroundColored" : "white";
+    },
+    styledHeight() {
+      return "height:" + this.height;
     }
   },
   props: {
@@ -49,6 +51,10 @@ export default {
       default: { what_to_do: "" }
     },
     backgroundColor: Boolean,
+    height: {
+      type: String,
+      default: "600px"
+    },
     sm: String,
     lg: String,
     xl: String
@@ -68,13 +74,7 @@ export default {
     width: 90%;
   }
 }
-
-#visitContainer {
-  height: "600px";
-}
-#visitAnchor {
-  position: relative;
-  top: -10em;
-  display: block;
+.visitContainer {
+  height: 600px;
 }
 </style>

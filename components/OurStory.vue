@@ -20,7 +20,7 @@ export default {
 
 #storyAnchor {
   position: relative;
-  top: -20em;
+  top: -10em;
   display: block;
 }
 </style>
