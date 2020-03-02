@@ -1,7 +1,16 @@
 <template>
   <div class="noLineHeight">
     <a id="topAnchor"></a>
-    <video id="myVideo" playsinline autoplay controls muted type="video/mp4" :src="introVideo" />
+    <video
+      id="myVideo"
+      playsinline
+      autoplay
+      controls
+      muted
+      type="video/mp4"
+      :poster="introPoster"
+      :src="introVideo"
+    />
     <Header />
     <nuxt />
     <b-link href="#topAnchor">
@@ -27,16 +36,20 @@ export default {
   data() {
     return {
       dynamicVideo: "/thiagoriIntroNoAudio.mp4",
+      dynamicPoster: "/posterh.png",
       desktopVideo: "/thiagoriIntroNoAudio.mp4",
       mobileVideo: "/thiagoriIntroMobile.mp4",
-      controls: true
+      posterh: "/posterh.png",
+      posterv: "/posterv.png"
     };
   },
   computed: {
+    introPoster() {
+      return this.dynamicPoster;
+    },
     introVideo() {
       return this.dynamicVideo;
-    },
-    isSafari() {}
+    }
   },
   methods: {
     async checkVideo() {
@@ -61,10 +74,11 @@ export default {
       console.log({
         switch: { width: window.innerWidth, height: innerHeight }
       });
-      this.dynamicVideo =
-        window.innerWidth >= window.innerHeight
-          ? this.desktopVideo
-          : this.mobileVideo;
+      if (window.innerWidth >= window.innerHeight) {
+        this.dynamicVideo = this.desktopVideo;
+        this.dynamicPoster = this.posterh;
+      } else this.dynamicVideo = this.mobileVideo;
+      this.dynamicPoster = this.posterv;
     }
   }
 };
