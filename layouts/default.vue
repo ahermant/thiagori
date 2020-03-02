@@ -18,23 +18,11 @@ export default {
     Header
   },
   async mounted() {
-    await this.switchVideo();
-    window.addEventListener("resize", this.switchVideo);
-    let promise = document.querySelector("video").play();
-
-    if (promise !== undefined) {
-      promise
-        .catch(error => {
-          alert(error);
-        })
-        .then(() => {
-          alert("All good");
-          this.controls = false;
-        });
-    }
+    await this.checkVideo();
+    window.addEventListener("resize", this.checkVideo);
   },
   destroyed() {
-    window.removeEventListener("resize", this.switchVideo);
+    window.removeEventListener("resize", this.checkVideo);
   },
   data() {
     return {
@@ -51,6 +39,24 @@ export default {
     isSafari() {}
   },
   methods: {
+    async checkVideo() {
+      await this.switchVideo();
+      this.playVideo();
+    },
+    playVideo() {
+      let promise = document.querySelector("video").play();
+
+      if (promise !== undefined) {
+        promise
+          .catch(error => {
+            alert(error);
+          })
+          .then(() => {
+            alert("All good");
+            this.controls = false;
+          });
+      }
+    },
     async switchVideo() {
       console.log({
         switch: { width: window.innerWidth, height: innerHeight }
