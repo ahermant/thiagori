@@ -2,14 +2,7 @@
   <div class="noLineHeight">
     <a id="topAnchor"></a>
     <div class="videoEmbedding">
-      <video
-        id="myVideo"
-        playsinline
-        :controls="controls"
-        muted
-        type="video/mp4"
-        :src="introVideo"
-      />
+      <video id="myVideo" playsinline controls muted type="video/mp4" :src="introVideo" />
     </div>
     <Header />
     <nuxt />
@@ -35,10 +28,10 @@ export default {
       promise
         .catch(error => {
           alert(error);
-          this.controls = true;
         })
         .then(() => {
           alert("All good");
+          this.controls = false;
         });
     }
   },
@@ -50,7 +43,7 @@ export default {
       dynamicVideo: "/thiagoriIntroNoAudio.mp4",
       desktopVideo: "/thiagoriIntroNoAudio.mp4",
       mobileVideo: "/thiagoriIntroMobile.mp4",
-      controls: false
+      controls: true
     };
   },
   computed: {
