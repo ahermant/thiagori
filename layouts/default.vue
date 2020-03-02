@@ -1,9 +1,7 @@
 <template>
   <div class="noLineHeight">
     <a id="topAnchor"></a>
-    <div class="videoEmbedding">
-      <video id="myVideo" playsinline controls muted type="video/mp4" :src="introVideo" />
-    </div>
+    <video id="myVideo" playsinline controls muted type="video/mp4" :src="introVideo" />
     <Header />
     <nuxt />
     <b-link href="#topAnchor">
@@ -22,7 +20,7 @@ export default {
   mounted() {
     this.switchVideo();
     window.addEventListener("resize", this.switchVideo);
-    var promise = document.getElementById("myVideo").play();
+    var promise = document.querySelector("video").play();
 
     if (promise !== undefined) {
       promise
@@ -49,7 +47,8 @@ export default {
   computed: {
     introVideo() {
       return this.dynamicVideo;
-    }
+    },
+    isSafari() {}
   },
   methods: {
     switchVideo() {
@@ -97,6 +96,9 @@ h1 {
 #myVideo {
   min-width: 100%;
   width: 100%;
+  @media (max-width: 992px) {
+    margin-top: 70px;
+  }
 }
 
 #topAnchor {
@@ -148,11 +150,5 @@ h1 {
   -moz-box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
   -webkit-box-shadow: 2px 2px 6px 0px rgba(119, 119, 119, 0.75);
   font-weight: bolder;
-}
-
-.videoEmbedding {
-  @media (max-width: 992px) {
-    margin-top: 70px;
-  }
 }
 </style>
