@@ -17,10 +17,10 @@ export default {
   components: {
     Header
   },
-  mounted() {
-    this.switchVideo();
+  async mounted() {
+    await this.switchVideo();
     window.addEventListener("resize", this.switchVideo);
-    var promise = document.querySelector("video").play();
+    let promise = document.querySelector("video").play();
 
     if (promise !== undefined) {
       promise
@@ -51,7 +51,7 @@ export default {
     isSafari() {}
   },
   methods: {
-    switchVideo() {
+    async switchVideo() {
       console.log({
         switch: { width: window.innerWidth, height: innerHeight }
       });
