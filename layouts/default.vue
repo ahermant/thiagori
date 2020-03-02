@@ -28,9 +28,9 @@ export default {
   },
   data() {
     return {
-      dynamicVideo: "~/thiagoriIntro.mp4",
-      desktopVideo: "~/thiagoriIntro.mp4",
-      mobileVideo: "~/thiagoriIntroMobile.mp4"
+      dynamicVideo: "/thiagoriIntro.mp4",
+      desktopVideo: "/thiagoriIntro.mp4",
+      mobileVideo: "/thiagoriIntroMobile.mp4"
     };
   },
   computed: {
