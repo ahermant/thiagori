@@ -112,6 +112,9 @@ h1 {
 #myVideo {
   min-width: 100%;
   width: 100%;
+  @media (max-width: 992px) {
+    margin-top: 20%;
+  }
 }
 
 .noLineHeight {

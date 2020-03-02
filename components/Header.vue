@@ -77,6 +77,11 @@ button {
   font-size: 4rem;
   color: darkgoldenrod;
   margin: auto;
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .modal-body {
@@ -98,12 +103,16 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   z-index: 1000;
+  @media (max-width: 992px) {
+    background-color: white;
+    min-height: 20%;
+  }
 }
 .langs {
   flex-direction: row;
