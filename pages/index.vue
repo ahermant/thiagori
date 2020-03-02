@@ -15,7 +15,7 @@
           xl="4"
           backgroundColor
           class="mx-auto"
-          height="580px"
+          height="525px"
         />
         <visitAround
           v-if="activities_vilha_velha"
@@ -23,7 +23,7 @@
           sm="12"
           xl="3"
           class="mx-auto"
-          height="550px"
+          height="470px"
         />
         <visitAround
           v-if="activities_nova_almeida"
@@ -32,7 +32,7 @@
           xl="6"
           backgroundColor
           class="mx-auto"
-          height="650px"
+          height="555px"
         />
       </template>
       <gifts class="mx-auto" :class="$i18n.locale==='br'?'backgroundColored':''" />
