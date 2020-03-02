@@ -139,7 +139,7 @@ h1 {
 
 .videoEmbedding {
   @media (max-width: 992px) {
-    margin-top: 20%;
+    margin-top: 70px;
   }
 }
 </style>

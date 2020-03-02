@@ -111,7 +111,7 @@ nav {
   z-index: 1000;
   @media (max-width: 992px) {
     background-color: white;
-    min-height: 20%;
+    min-height: 70px;
   }
 }
 .langs {
