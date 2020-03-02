@@ -117,7 +117,7 @@ export default {
     general_information_photos_videos: 'Pictures / Videos',
     general_information_photos_videos_content: '<p>We encourage guests to post pictures on to their social media channels, our only request is that you tag each photo with our wedding hashtag <em><strong>#thiagori</strong></em> so we can keep track of all of your pictures!</p>',
     general_information_questions: 'Questions ?',
-    general_information_questions_content: '<p>If<strong>&nbsp;</strong>you happen to still have some questions, please feel free to contact us or our wedding planner, Thainara, whom will be happy to help you with all of your concerns :</p><p><a href="tel:+5527998979334">+55 27 99897-9334</a></p>',
+    general_information_questions_content: '<p>If<strong>&nbsp;</strong>you happen to still have some questions, please feel free to contact us or our wedding planner, Thainara, whom will be happy to help you with all of your concerns :</p>',
     general_information_not_brazilians: 'Dear foreign guests,',
     general_information_weather: 'Weather conditions',
     general_information_weather_content: '<p>On the 28th of November in Brazil, it will be the beginning of Summer. Usually, at that time of the year, the temperatures are quite high or/and it might also rain.</p><p>Please plan to bring with you the correct attire and items for your comfort such as sunscreen for instance as even in the shadow you can get a sunburn.</p><p>Also, the dinner and party will be both on the beach at the same venue. We advise the ladies <u><strong>not</strong></u> to wear heels but rather flat sandals or to stay barefoot.</p>',

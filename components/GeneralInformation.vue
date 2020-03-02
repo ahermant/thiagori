@@ -18,7 +18,9 @@
         {{$t('general_information_questions')}}
       </b-card-title>
       <b-card-text v-html="$t('general_information_questions_content')" />
-
+      <p>
+        <a href="tel:+5527998979334" class="phoneNumber">+55 27998979334</a>
+      </p>
       <hr class="my-4" />
       <template v-if="$i18n.locale==='fr'">
         <b-card-title
@@ -59,6 +61,10 @@ export default {
 <style lang="scss">
 .backgroundColor {
   background-color: $backgroundColor;
+}
+
+.phoneNumber {
+  font-family: -webkit-body;
 }
 
 #infoAnchor {
