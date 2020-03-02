@@ -7,55 +7,55 @@ export default {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408058-Reviews-Palacio_Anchieta-Vitoria_State_of_Espirito_Santo.html",
                     title: "Palais Anchieta et ses expositions diverses (gratuit)",
-                    image: "anchieta.jpg"
+                    image: "~/anchieta.jpg"
                 },
                 boi: {
                     description: "Partie bourgeoise de Vitoria, belle plage pour se baigner et se reposer",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408054-Reviews-Boi_Island-Vitoria_State_of_Espirito_Santo.html",
                     title: "Plage de l’île de Boi - Ilha do Boi (gratuit)",
-                    image: "boi.jpg"
+                    image: "~/boi.jpg"
                 },
                 bus: {
                     description: "Il est possible de faire le tour de la ville de Vitoria en bus touristique. Les bus circulent les Mercredi, Samedi, Dimanche et pendant les vacances. Des sièges sont disponibles pour les personnes agées et les femmes enceintes.<br/>Prix: 70 reais par personne + 5 pour aller au couvent en van.<br/>Langues: Anglais, Brésilien",
                     link: "https://www.tripadvisor.co.uk/Attraction_Review-g303320-d9748071-Reviews-Capixaba_Turismo_Receptivo-Vitoria_State_of_Espirito_Santo.html?m=19905",
                     title: "Vitória and Vila Velha bus tour",
-                    image: "bus.jpg"
+                    image: "~/bus.jpg"
                 },
                 catedral: {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408045-Reviews-Metropolitana_Cathedral-Vitoria_State_of_Espirito_Santo.html",
                     title: "Cathédrale de Vitoria (gratuit)",
-                    image: "catedral.jpg"
+                    image: "~/catedral.jpg"
                 },
                 cebola: {
                     description: "Joli parc à visiter",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408061-Reviews-Parque_Pedra_da_Cebola-Vitoria_State_of_Espirito_Santo.html",
                     title: "Parc Pedra da Cebola (gratuit)",
-                    image: "cebola.jpg"
+                    image: "~/cebola.jpg"
                 },
                 camburi: {
                     description: "Super pour se balader ou louer un vélo",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303320-d2408063-Reviews-Camburi_Beach-Vitoria_State_of_Espirito_Santo.html",
                     title: "La plage Orla de Camburi (gratuit)",
-                    image: "camburi.jpg"
+                    image: "~/camburi.jpg"
                 },
                 frade: {
                     description: "Partie bourgeoise de Vitoria, belle plage pour se baigner et se reposer",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303320-d10423112-Reviews-Ilha_do_Frade-Vitoria_State_of_Espirito_Santo.html",
                     title: "Plage de l’île de Frade - Ilha do Frade (gratuit)",
-                    image: "frade.jpg"
+                    image: "~/frade.jpg"
                 },
                 tamar: {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303320-d6436878-Reviews-Projeto_Tamar_Vitoria-Vitoria_State_of_Espirito_Santo.html",
                     title: "Projet Tamar – Observatoire de tortues de mer – prix = R$15",
-                    image: "tamar.jpg"
+                    image: "~/tamar.jpg"
                 },
                 teatro: {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303320-d4127203-Reviews-Gloria_Theater-Vitoria_State_of_Espirito_Santo.html",
                     title: "Théâtre Sesc Gloria – Centre culturel (gratuit)",
-                    image: "teatro.jpg"
+                    image: "~/teatro.jpg"
                 }
             }
         },
@@ -66,25 +66,25 @@ export default {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303319-d10807919-Reviews-Museu_Garoto-Vila_Velha_State_of_Espirito_Santo.html",
                     title: "Visitez la chocolaterie et musée du chocolat Garoto : Fabrica de chocolates GAROTO e Museu Chocolates Garoto (prix = R$10 reais)",
-                    image: "chocolate.jpg"
+                    image: "~/chocolate.jpg"
                 },
                 covento: {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303319-d2408107-Reviews-Nossa_Senhora_da_Penha_Convent-Vila_Velha_State_of_Espirito_Santo.html",
                     title: "Visitez le couvent Nossa Senhora da Penha et profitez de la vue exceptionnelle (gratuit)",
-                    image: "covento.jpg"
+                    image: "~/covento.jpg"
                 },
                 lightHouse: {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303319-d8533291-Reviews-Farol_de_Santa_Luzia-Vila_Velha_State_of_Espirito_Santo.html",
                     title: "Visitez le phare : Farol Santa Luzia (gratuit)",
-                    image: "lightHouse.jpg"
+                    image: "~/lightHouse.jpg"
                 },
                 museum: {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303319-d4377760-Reviews-Museu_Vale-Vila_Velha_State_of_Espirito_Santo.html",
                     title: "Visitez le musée du Vale (gratuit) – musée ferroviaire",
-                    image: "museum.jpg"
+                    image: "~/museum.jpg"
                 }
             }
         },
@@ -95,13 +95,13 @@ export default {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g303319-d10807919-Reviews-Museu_Garoto-Vila_Velha_State_of_Espirito_Santo.html",
                     title: "Visitez l’église “Igreja dos Reis Magos” (gratuit) et le site historique et archéologique Reis Magos (gratuit) ",
-                    image: "igreja.jpg"
+                    image: "~/igreja.jpg"
                 },
                 pedra: {
                     description: "",
                     link: "https://www.tripadvisor.com/Attraction_Review-g2342774-d4377595-Reviews-Stone_House-Serra_State_of_Espirito_Santo.html",
                     title: "Visitez la maison de pierre : Casa de Pedra (gratuit)",
-                    image: "pedra.jpg"
+                    image: "~/pedra.jpg"
                 }
             }
         },

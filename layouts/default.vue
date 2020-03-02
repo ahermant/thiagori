@@ -1,7 +1,9 @@
 <template>
   <div class="noLineHeight">
     <a id="topAnchor"></a>
-    <video id="myVideo" playsinline muted autoplay type="video/mp4" :src="introVideo" />
+    <div class="videoEmbedding">
+      <video id="myVideo" playsinline muted autoplay type="video/mp4" :src="introVideo" />
+    </div>
     <Header />
     <nuxt />
     <b-link href="#topAnchor">
@@ -26,9 +28,9 @@ export default {
   },
   data() {
     return {
-      dynamicVideo: "/thiagoriIntro.mp4",
-      desktopVideo: "/thiagoriIntro.mp4",
-      mobileVideo: "/thiagoriIntroMobile.mp4"
+      dynamicVideo: "~/thiagoriIntro.mp4",
+      desktopVideo: "~/thiagoriIntro.mp4",
+      mobileVideo: "~/thiagoriIntroMobile.mp4"
     };
   },
   computed: {
@@ -79,6 +81,17 @@ h1 {
   margin: 0;
 }
 
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  min-width: 100%;
+  width: 100%;
+}
+
+#topAnchor {
+  position: absolute;
+  top: 0;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -108,12 +121,6 @@ h1 {
   background-color: #35495e;
 }
 
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  min-width: 100%;
-  width: 100%;
-}
-
 .noLineHeight {
   line-height: 0;
 }
@@ -131,8 +138,9 @@ h1 {
   font-weight: bolder;
 }
 
-#topAnchor {
-  position: absolute;
-  top: 0;
+.videoEmbedding {
+  @media (max-width: 992px) {
+    margin-top: 20%;
+  }
 }
 </style>
