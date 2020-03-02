@@ -2,7 +2,15 @@
   <div class="noLineHeight">
     <a id="topAnchor"></a>
     <div class="videoEmbedding">
-      <video id="myVideo" playsinline muted autoplay type="video/mp4" :src="introVideo" />
+      <video
+        id="myVideo"
+        playsinline
+        :controls="controls"
+        muted
+        autoplay
+        type="video/mp4"
+        :src="introVideo"
+      />
     </div>
     <Header />
     <nuxt />
@@ -22,6 +30,18 @@ export default {
   mounted() {
     this.switchVideo();
     window.addEventListener("resize", this.switchVideo);
+    var promise = document.getElementById("myVideo").play();
+
+    if (promise !== undefined) {
+      promise
+        .catch(error => {
+          alert(error);
+          this.controls = true;
+        })
+        .then(() => {
+          alert("All good");
+        });
+    }
   },
   destroyed() {
     window.removeEventListener("resize", this.switchVideo);
@@ -30,7 +50,8 @@ export default {
     return {
       dynamicVideo: "/thiagoriIntroNoAudio.mp4",
       desktopVideo: "/thiagoriIntroNoAudio.mp4",
-      mobileVideo: "/thiagoriIntroMobile.mp4"
+      mobileVideo: "/thiagoriIntroMobile.mp4",
+      controls: false
     };
   },
   computed: {
