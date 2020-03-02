@@ -28,8 +28,8 @@ export default {
   },
   data() {
     return {
-      dynamicVideo: "/thiagoriIntro.mp4",
-      desktopVideo: "/thiagoriIntro.mp4",
+      dynamicVideo: "/thiagoriIntroNoAudio.mp4",
+      desktopVideo: "/thiagoriIntroNoAudio.mp4",
       mobileVideo: "/thiagoriIntroMobile.mp4"
     };
   },
