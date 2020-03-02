@@ -7,7 +7,7 @@
         <b-navbar-nav fill>
           <b-nav-item class="nav--link" href="#infoAnchor">{{ $t('general_information') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#storyAnchor">{{ $t('our_story') }}</b-nav-item>
-          <b-nav-item class="nav--link" href="#mapAnchor">{{ $t('map_hotels') }}</b-nav-item>
+          <b-nav-item class="nav--link" href="#mapsAnchor">{{ $t('map_hotels') }}</b-nav-item>
           <b-nav-item class="nav--link" href="#RSVPAnchor">{{ $t('rsvp') }}</b-nav-item>
           <b-nav-item
             class="nav--link"

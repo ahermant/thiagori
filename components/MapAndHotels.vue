@@ -1,9 +1,9 @@
 <template>
   <div id="mapContainer" class="w-100 text-center pt-3 mx-auto">
+    <a id="mapsAnchor"></a>
     <b-row class="m-4">
       <b-col fluid>
         <h1 class="text-center text-justify">{{$t('map_hotels')}}</h1>
-        <a id="mapAnchor"></a>
       </b-col>
     </b-row>
     <b-row class="m-4">
@@ -31,6 +31,7 @@
           :title="$t('hotel_list_nova_almeida')"
           height="375px"
         />
+        <a id="brunchAnchor"></a>
         <hotelsCard
           :hotelsList="hotelsList.beachHouse"
           @placeChange="switchPlace"
@@ -42,6 +43,7 @@
       <b-col id="map" lg="8">
         <b-card body-class="text-center" class="thiagoriCard mb-5">
           <b-card-title title-tag="h2" :title="placeName" class="mt-1 mb-3" />
+          <a id="mapAnchor"></a>
           <iframe
             :src="mapURL"
             width="100%"
@@ -219,7 +221,8 @@ export default {
 a {
   cursor: pointer;
 }
-#mapAnchor {
+#mapAnchor,
+#brunchAnchor {
   position: relative;
   top: -12em;
   display: block;

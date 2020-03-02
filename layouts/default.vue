@@ -38,8 +38,8 @@ export default {
       dynamicVideo: "/thiagoriIntroNoAudio.mp4",
       dynamicPoster: "/posterh.png",
       desktopVideo: "/thiagoriIntroNoAudio.mp4",
-      mobileVideo: "/thiagoriIntroMobile.mp4",
       posterh: "/posterh.png",
+      mobileVideo: "/thiagoriIntroMobile.mp4",
       posterv: "/posterv.png"
     };
   },
