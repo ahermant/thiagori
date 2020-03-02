@@ -104,6 +104,7 @@ export default {
 
 .pageBody {
   font-family: "Bad Script", cursive;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
