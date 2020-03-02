@@ -13,7 +13,7 @@
               <input type="hidden" name="hosted_button_id" value="QCHN4YVVUSHTC" />
               <input
                 type="image"
-                src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif"
+                src="https://thiagori.netlify.com/btn_donateCC_EN.png"
                 border="0"
                 name="submit"
                 title="PayPal - The safer, easier way to pay online!"
@@ -31,7 +31,7 @@
               <input type="hidden" name="hosted_button_id" value="NYYKJQ96EVU7J" />
               <input
                 type="image"
-                src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif"
+                src="https://thiagori.netlify.com/btn_donateCC_BR.png"
                 border="0"
                 name="submit"
                 title="PayPal - The safer, easier way to pay online!"
@@ -49,11 +49,11 @@
               <input type="hidden" name="hosted_button_id" value="QXTKGGVL6QYLQ" />
               <input
                 type="image"
-                src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif"
+                src="https://thiagori.netlify.com/btn_donateCC_FR.png"
                 border="0"
                 name="submit"
                 title="PayPal - The safer, easier way to pay online!"
-                alt="Bouton Faites un don avec PayPal"
+                alt="Faites un cadeau à Auri et Thiago avec PayPal"
               />
               <img
                 alt
