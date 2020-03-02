@@ -1,7 +1,7 @@
 <template>
   <div class="noLineHeight">
     <a id="topAnchor"></a>
-    <video id="myVideo" playsinline controls muted type="video/mp4" :src="introVideo" />
+    <video id="myVideo" playsinline autoplay controls muted type="video/mp4" :src="introVideo" />
     <Header />
     <nuxt />
     <b-link href="#topAnchor">
