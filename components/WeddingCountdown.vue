@@ -8,25 +8,25 @@
           <b-row>
             <b-col lg="3">
               <b-card class="thiagoriCard" body-class="text-center">
-                <b-card-title title-tag="h2" :title="$t('days')" />
+                <b-card-title title-tag="h2" class="text-capitalize" :title="$t('days')" />
                 <b-card-text class="countdown-text" v-html="props.days" />
               </b-card>
             </b-col>
             <b-col lg="3">
               <b-card class="thiagoriCard" body-class="text-center">
-                <b-card-title title-tag="h2" :title="$t('hours')" />
+                <b-card-title title-tag="h2" class="text-capitalize" :title="$t('hours')" />
                 <b-card-text class="countdown-text" v-html="props.hours" />
               </b-card>
             </b-col>
             <b-col lg="3">
               <b-card class="thiagoriCard" body-class="text-center">
-                <b-card-title title-tag="h2" :title="$t('minutes')" />
+                <b-card-title title-tag="h2" class="text-capitalize" :title="$t('minutes')" />
                 <b-card-text class="countdown-text" v-html="props.minutes" />
               </b-card>
             </b-col>
             <b-col lg="3">
               <b-card class="thiagoriCard" body-class="text-center">
-                <b-card-title title-tag="h2" :title="$t('seconds')" />
+                <b-card-title title-tag="h2" class="text-capitalize" :title="$t('seconds')" />
                 <b-card-text class="countdown-text" v-html="props.seconds" />
               </b-card>
             </b-col>
