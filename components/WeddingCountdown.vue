@@ -1,11 +1,37 @@
 <template>
   <b-card body-class="text-center" id="story" class="w-75 border-0 pt-0 mt-0">
     <b-card-title title-tag="h2" class="pt-0 my-5" :title="weddingDate" />
-    <b-card-title title-tag="h2" class="pt-0 mt-0 mb-5">
+    <b-card-title title-tag="h2" class="p-4 mt-0 mb-5 backgroundColor">
       <countdown :time="milliseconds">
-        <template
-          slot-scope="props"
-        >{{$t('time_remaining')}}: {{ props.days }} {{$t('days')}}, {{ props.hours }} {{$t('hours')}}, {{ props.minutes }} {{$t('minutes')}}, {{ props.seconds }} {{$t('seconds')}}.</template>
+        <template slot-scope="props">
+          <p class="mb-4">{{$t('time_remaining')}}</p>
+          <b-row>
+            <b-col lg="3">
+              <b-card class="thiagoriCard" body-class="text-center">
+                <b-card-title title-tag="h2" :title="$t('days')" />
+                <b-card-text class="countdown-text" v-html="props.days" />
+              </b-card>
+            </b-col>
+            <b-col lg="3">
+              <b-card class="thiagoriCard" body-class="text-center">
+                <b-card-title title-tag="h2" :title="$t('hours')" />
+                <b-card-text class="countdown-text" v-html="props.hours" />
+              </b-card>
+            </b-col>
+            <b-col lg="3">
+              <b-card class="thiagoriCard" body-class="text-center">
+                <b-card-title title-tag="h2" :title="$t('minutes')" />
+                <b-card-text class="countdown-text" v-html="props.minutes" />
+              </b-card>
+            </b-col>
+            <b-col lg="3">
+              <b-card class="thiagoriCard" body-class="text-center">
+                <b-card-title title-tag="h2" :title="$t('seconds')" />
+                <b-card-text class="countdown-text" v-html="props.seconds" />
+              </b-card>
+            </b-col>
+          </b-row>
+        </template>
       </countdown>
     </b-card-title>
   </b-card>
@@ -43,4 +69,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.countdown-text {
+  font-size: 1.2em;
+}
 </style>
