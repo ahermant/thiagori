@@ -116,6 +116,8 @@ export default {
     enter_email: 'Veuillez saisir votre email',
     enter_name: 'Veuillez saisir votre prénom et votre nom',
     general_information: 'Informations générales',
+    general_information_babysitter: 'Garde d\'enfants',
+    general_information_babysitter_content: 'Pour les couples avec enfant(s) qui souhaiteraient les faire garder, voici le contact de Renata, conseillée par notre organisatrice de mariage: ',
     general_information_brunch: 'Brunch',
     general_information_brunch_content: '<p>Vous êtes invités à la maison de plage des parents de Thiago le lendemain du mariage. La maison se trouve à Fundão, à cette adresse :<br/><a href=\'https://goo.gl/maps/iTHmSHgNtJQD3txN6\' target=\'_blank\'>Av. Uirapuru, 01 - Enseada das Garças, Fundão - ES, 29185-000 Brésil</a><br/>Nous vous conseillons de prendre un hôtel proche de Nova Almeida le 28 Novembre (jour de la cérémonie) puis un hôtel à Fundao le 29 Novembre si vous voulez participer au brunch.<br/> Des listes d\'hôtels sont disponibles <a href="#brunchAnchor">ici</a></p>',
     general_information_photos_videos: 'Photos / Vidéos',

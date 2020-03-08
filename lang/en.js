@@ -112,6 +112,8 @@ export default {
     enter_email: 'Please fill your email address',
     enter_name: 'Please fill your firstname and your name',
     general_information: 'Important points',
+    general_information_babysitter: 'Baby-sitter',
+    general_information_babysitter_content: 'For those who need someone to take care of their children, here is the contact of Renata, recommended by our wedding planner: ',
     general_information_brunch: 'Brunch',
     general_information_brunch_content: '<p>You are invited in Thiago\'s parent beach house on the day after the wedding to share a brazilian brunch. The house is located  in Fundão, at this address:<br/><a href=\'https://goo.gl/maps/iTHmSHgNtJQD3txN6\' target=\'_blank\'>Av. Uirapuru, 01 - Enseada das Garças, Fundão - ES, 29185-000 Brazil</a></p>',
     general_information_photos_videos: 'Pictures / Videos',

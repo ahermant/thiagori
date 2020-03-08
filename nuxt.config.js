@@ -69,7 +69,21 @@ export default {
       }
     ],
     '@nuxtjs/style-resources',
-    '@nuxtjs/moment'
+    '@nuxtjs/moment',
+    ['nuxt-fontawesome',
+      {
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas']
+          },
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['fab']
+          }
+        ]
+      }
+    ]
   ],
   bootstrapVue: {
     // Add the desired icon components to the `components` array

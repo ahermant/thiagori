@@ -29,7 +29,7 @@
           :hotelsList="hotelsList.novaAlmeida"
           @placeChange="switchPlace"
           :title="$t('hotel_list_nova_almeida')"
-          height="375px"
+          :height="novaAlmeidaHeight"
         />
         <a id="brunchAnchor"></a>
         <hotelsCard
@@ -205,7 +205,11 @@ export default {
       }
     };
   },
-  computed: {},
+  computed: {
+    novaAlmeidaHeight() {
+      return this.$i18n.locale === "fr" ? "375px" : "618px";
+    }
+  },
   methods: {
     switchPlace(place) {
       console.log({ switchPlace: place, this: this });
