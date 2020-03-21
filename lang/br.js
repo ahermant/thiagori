@@ -24,6 +24,7 @@ export default {
     greeting: 'Opa pessoal !',
     guest_messages: 'Mensagem aos Noivos',
     hotel_list: 'Hotels nearby',
+    hotel_list_vilha_velha: 'Hotels perto Vilha Velha',
     hotel_list_vitoria: 'Hotéis perto Vitória',
     hotel_list_nova_almeida: 'Hotéis perto Nova Almeida (local do Casamento)',
     hotel_list_beach_house: 'Hotel right in front of Thiago’s parents Beach House (Brunch on the day after)',

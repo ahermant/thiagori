@@ -23,7 +23,13 @@
           :hotelsList="hotelsList.vitoria"
           @placeChange="switchPlace"
           :title="$t('hotel_list_vitoria')"
-          height="440px"
+          height="340px"
+        />
+        <hotelsCard
+          :hotelsList="hotelsList.vilhavelha"
+          @placeChange="switchPlace"
+          :title="$t('hotel_list_vilha_velha')"
+          height="220px"
         />
         <hotelsCard
           :hotelsList="hotelsList.novaAlmeida"
@@ -47,7 +53,7 @@
           <iframe
             :src="mapURL"
             width="100%"
-            height="1075px"
+            height="1185px"
             frameborder="0"
             allowfullscreen
             class="border-0 mb-4"
@@ -95,7 +101,7 @@ export default {
               "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.62501206656!2d-40.198089449079404!3d-20.191332951637637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81d2dc60527f1%3A0xe1fa699b8cb15e44!2sECO%20MANGUINHOS!5e0!3m2!1sfr!2sca!4v1579459016469!5m2!1sfr!2sca",
             address:
               "064, R. Prof. Geraldo Costa Alves, 01 - Manguinhos, Serra - ES",
-            distance: "1,2 km"
+            distance: "1,2km"
           },
           {
             name: "Orchard Inn Manguinhos",
@@ -103,28 +109,28 @@ export default {
               "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.573074325389!2d-40.19725064907934!3d-20.193493751706246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81dad2ef24311%3A0xdb8ec9bbc772f50!2sOrchard%20Inn%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579464763784!5m2!1sfr!2sca",
             address:
               "R. Elpídio Pímentel, 22 - Manguinhos, Serra - ES, 29173-065",
-            distance: "1,1 km"
+            distance: "1,1km"
           },
           {
             name: "Pousada Manguas",
             mapURL:
               "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.561891919485!2d-40.194402049079365!3d-20.19395895172096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81c534f201ceb%3A0x45b07166de344a1b!2sPousada%20Mangas!5e0!3m2!1sfr!2sca!4v1579464879306!5m2!1sfr!2sca",
             address: "Av. Mte. Álvaro, 186 - Manguinhos, Serra - ES, 29173-039",
-            distance: "1 km"
+            distance: "1km"
           },
           {
             name: "Hostel Kurahay",
             mapURL:
               "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.5960320983245!2d-40.19310554907939!3d-20.192538651675886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81dab6733292b%3A0x4b6be2aba7c40f3b!2sHostel%20Kuarahy!5e0!3m2!1sfr!2sca!4v1579465007278!5m2!1sfr!2sca",
             address: "Av. Atapoã, 607 - Manguinhos, Serra - ES, 29173-000",
-            distance: "1 km"
+            distance: "1km"
           },
           {
             name: "Aldeia Manguinhos",
             mapURL:
               "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14977.785651760476!2d-40.1972828!3d-20.1987624!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c991f0d8d7468d7!2sAldeia%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579470319184!5m2!1sfr!2sca",
             address: "Av. Bicanga, 278 - Manguinhos, Serra - ES, 29164-817",
-            distance: "1,8 km"
+            distance: "1,8km"
           },
 
           {
@@ -132,7 +138,7 @@ export default {
             mapURL:
               "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.5868693050315!2d-40.19383404907931!3d-20.19291985168805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81daca67837b1%3A0x1c532dd7adcd1878!2sSolar%20de%20Manguinhos!5e0!3m2!1sfr!2sca!4v1579465106495!5m2!1sfr!2sca",
             address: "Av, R. Ocidente, 172 - Manguinhos, Serra - ES, 29173-047",
-            distance: "1 km"
+            distance: "1km"
           },
           {
             name: "Spaço 'D Hospedagem",
@@ -140,14 +146,24 @@ export default {
               "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14978.430571328767!2d-40.1970712!3d-20.1920556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x695789c04b73924a!2sSpa%C3%A7o%20D%20Hospedagem!5e0!3m2!1sfr!2sca!4v1579470570708!5m2!1sfr!2sca",
             address:
               "R. Manoel José Lírio de Sales, 17 - Manguinhos, Serra - ES, 29173-050",
-            distance: "1,6 km"
+            distance: "1,6km"
           },
           {
             name: "Hotel Jardins",
             mapURL:
               "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.1881562400963!2d-40.26334154907891!3d-20.209500852214912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81ed3db286d57%3A0xda6fd12cde857456!2sES-010%2C%201307%20-%20Jardim%20Limoeiro%2C%20Serra%20-%20ES%2C%2029194-043%2C%20Br%C3%A9sil!5e0!3m2!1sfr!2sca!4v1583102730913!5m2!1sfr!2sca",
             address: "ES-010, 1307 - Jardim Limoeiro, Serra - ES, 29194-043",
-            distance: "8,8 km"
+            distance: "8,8km"
+          }
+        ],
+        vilhavelha: [
+          {
+            name: "Quality Suites Vila Velha",
+            mapURL:
+              "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14964.638068009228!2d-40.280975!3d-20.3350278!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdbe05380e1849479!2sQuality%20Suites%20Vila%20Velha!5e0!3m2!1sfr!2sca!4v1584830193745!5m2!1sfr!2sca",
+            address:
+              "Av. Antônio Gil Veloso, 856 - Praia da Costa, Vila Velha - ES, 29101-010",
+            distance: "27km"
           }
         ],
         vitoria: [
@@ -207,7 +223,7 @@ export default {
   },
   computed: {
     novaAlmeidaHeight() {
-      return this.$i18n.locale === "fr" ? "375px" : "618px";
+      return this.$i18n.locale === "fr" ? "345px" : "595px";
     }
   },
   methods: {
