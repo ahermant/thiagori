@@ -1,6 +1,6 @@
 export default {
     brasilian_time: "(Horário do Brasil)",
-    days: 'days',
+    days: 'dias',
     email_address: 'Email',
     enter_email: 'Por favor insira seu email aqui',
     enter_name: 'Por favor insira seu nome aqui',
