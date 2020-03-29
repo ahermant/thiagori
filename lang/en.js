@@ -60,7 +60,7 @@ export default {
             }
         },
         vilha_velha: {
-            what_to_do: 'What to do in Vilha Velha?',
+            what_to_do: 'Activities in Vilha Velha?',
             places: {
                 chocolate: {
                     description: "",
@@ -89,7 +89,7 @@ export default {
             }
         },
         nova_almeida: {
-            what_to_do: 'What to do in Nova Almeida? (Close to the ceremony area)',
+            what_to_do: 'Activities in Nova Almeida - ceremony area ? ',
             places: {
                 igreja: {
                     description: "",
@@ -131,8 +131,9 @@ export default {
     greeting: 'Hello world!',
     guest_messages: 'Leave a message',
     hotel_list: 'Hotels nearby',
-    hotel_list_vitoria: 'Hotels near Vitória (closest big city)',
-    hotel_list_nova_almeida: 'Hotels near Nova Almeida (ceremony place)',
+    hotel_list_vilha_velha: 'Hotels in Vilha Velha (Thiago\'s parent city, next to Vitória)',
+    hotel_list_vitoria: 'Hotels in Vitória (closest big city)',
+    hotel_list_nova_almeida: 'Hotels in Nova Almeida (ceremony place)',
     hotel_list_beach_house: 'Hotel right in front of Thiago’s parents Beach House (Brunch on the day after)',
     hours: 'hours',
     lang: 'Lang',
