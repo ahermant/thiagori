@@ -116,7 +116,7 @@ h1 {
   min-width: 100%;
   width: 100%;
   @media (max-width: 992px) {
-    margin-top: 70px;
+    margin-top: 96px;
   }
 }
 
