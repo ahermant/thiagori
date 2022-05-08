@@ -76,8 +76,10 @@ export default {
       if (window.innerWidth >= window.innerHeight) {
         this.dynamicVideo = this.desktopVideo;
         this.dynamicPoster = this.posterh;
-      } else this.dynamicVideo = this.mobileVideo;
-      this.dynamicPoster = this.posterv;
+      } else {
+        this.dynamicVideo = this.mobileVideo;
+        this.dynamicPoster = this.posterv;
+      }
     }
   }
 };
