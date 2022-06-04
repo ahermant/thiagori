@@ -1,6 +1,12 @@
 <template>
   <b-card body-class="text-center" id="story" class="w-75 border-0 pt-0 mt-0">
     <b-card-title title-tag="h2" class="pt-0 my-5" :title="weddingDate" />
+    <b-card-title title-tag="h2" class="pt-0 my-5" :title="weddingPlace">
+      <b-link :href="$t('wedding_google_map')" target="_blank">
+        <b-icon icon="geo" />
+        {{ weddingPlace }}
+      </b-link>
+    </b-card-title>
     <b-card-title title-tag="h2" class="p-4 mt-0 mb-5 backgroundColor">
       <countdown :time="milliseconds">
         <template slot-scope="props">
@@ -57,7 +63,7 @@
 export default {
   data() {
     return {
-      date: "19/11/2022 16:00:00",
+      date: "19/11/2022 16:00:00"
     };
   },
   computed: {
@@ -70,6 +76,9 @@ export default {
         this.date
       );
     },
+    weddingPlace() {
+      return this.$t("wedding_place") + ": " + this.$t("wedding_address");
+    },
     weddingTimestamp() {
       return this.$moment
         .utc(this.date, "DD/MM/YYYY HH:ii:ss")
@@ -79,8 +88,8 @@ export default {
     milliseconds() {
       let timestamp = this.weddingTimestamp - Date.now();
       return timestamp;
-    },
-  },
+    }
+  }
 };
 </script>
 

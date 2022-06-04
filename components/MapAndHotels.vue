@@ -3,7 +3,7 @@
     <a id="mapsAnchor"></a>
     <b-row class="m-4">
       <b-col fluid>
-        <h1 class="text-center text-justify">{{$t('map_hotels')}}</h1>
+        <h1 class="text-center text-justify">{{ $t("map_hotels") }}</h1>
       </b-col>
     </b-row>
     <b-row class="m-4">
@@ -13,10 +13,10 @@
             <h5>
               <b-link href="#mapAnchor" @click="switchPlace(weddingPlace)">
                 <b-icon icon="geo"></b-icon>
-                {{weddingPlace.name}}
+                {{ weddingPlace.name }}
               </b-link>
             </h5>
-            <p>{{weddingPlace.address}}</p>
+            <p>{{ weddingPlace.address }}</p>
           </div>
         </b-card>
         <hotelsCard
@@ -43,7 +43,7 @@
           @placeChange="switchPlace"
           :title="$t('hotel_list_beach_house')"
           height="230px"
-          v-if="$i18n.locale==='fr'"
+          v-if="$i18n.locale === 'fr'"
         />
       </b-col>
       <b-col id="map" lg="8">
@@ -76,12 +76,12 @@ export default {
       placeName: this.$t("wedding_place"),
       mapURL:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.733603092703!2d-40.19286894907956!3d-20.18681445149419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81da9518a53c3%3A0xff0535f8c34a60e0!2sAv.%20Atapo%C3%A3%2C%201%20-%20Manguinhos%2C%20Serra%20-%20ES%2C%2029173-000%2C%20Br%C3%A9sil!5e0!3m2!1sfr!2sca!4v1579458564783!5m2!1sfr!2sca4",
-      address: "Av. Atapoã, 1 - Manguinhos, Serra - ES, 29173-000",
+      address: this.$t("wedding_address"),
       weddingPlace: {
         name: this.$t("wedding_place"),
         mapURL:
           "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.733603092703!2d-40.19286894907956!3d-20.18681445149419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb81da9518a53c3%3A0xff0535f8c34a60e0!2sAv.%20Atapo%C3%A3%2C%201%20-%20Manguinhos%2C%20Serra%20-%20ES%2C%2029173-000%2C%20Br%C3%A9sil!5e0!3m2!1sfr!2sca!4v1579458564783!5m2!1sfr!2sca",
-        address: "Av. Atapoã, 1 - Manguinhos, Serra - ES, 29173-000"
+        address: this.$t("wedding_address")
       },
       hotelsList: {
         beachHouse: [
